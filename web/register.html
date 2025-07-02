@@ -11,71 +11,69 @@
       <form id="register-form">
         <div class="form-group">
           <label for="username"
-            >Tên đăng nhập <span style="color: red">*</span></label
+            >Tên đăng nhập <span class="required">*</span></label
           >
-          <input type="text" id="username" required />
+          <input
+            type="text"
+            id="username"
+            required
+            placeholder="Nhập tên đăng nhập"
+          />
         </div>
 
         <div class="form-group">
-          <label for="password"
-            >Mật khẩu <span style="color: red">*</span></label
-          >
-          <input type="password" id="password" required />
+          <label for="email">Email <span class="required">*</span></label>
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="Nhập địa chỉ email"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mật khẩu <span class="required">*</span></label>
+          <input
+            type="password"
+            id="password"
+            required
+            placeholder="Nhập mật khẩu"
+          />
         </div>
 
         <div class="form-group">
           <label for="confirm-password"
-            >Xác nhận mật khẩu <span style="color: red">*</span></label
+            >Xác nhận mật khẩu <span class="required">*</span></label
           >
-          <input type="password" id="confirm-password" required />
+          <input
+            type="password"
+            id="confirm-password"
+            required
+            placeholder="Nhập lại mật khẩu"
+          />
         </div>
 
         <div class="form-group">
           <label for="fullname">Họ và tên</label>
-          <input type="text" id="fullname" />
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="gender">Giới tính</label>
-            <select id="gender">
-              <option value="">-- Chọn giới tính --</option>
-              <option value="Nam">Nam</option>
-              <option value="Nữ">Nữ</option>
-              <option value="Khác">Khác</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="dob">Ngày sinh</label>
-            <input type="date" id="dob" />
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="address">Địa chỉ</label>
-          <input type="text" id="address" />
+          <input type="text" id="fullname" placeholder="Nhập họ và tên" />
         </div>
 
         <div class="form-group">
           <label for="phone">Số điện thoại</label>
-          <input type="text" id="phone" />
+          <input type="tel" id="phone" placeholder="Nhập số điện thoại" />
         </div>
 
-        <div class="form-group">
-          <label for="email">Email <span style="color: red">*</span></label>
-          <input type="email" id="email" required />
-        </div>
-
-        <div class="checkbox-wrapper">
+        <div class="checkbox-group">
           <input type="checkbox" id="agree-terms" />
           <label for="agree-terms">
-            Tôi đồng ý với điều khoản <span class="required">*</span>
+            Tôi đồng ý với
+            <a href="#" class="terms-link">điều khoản sử dụng</a>
+            <span class="required">*</span>
           </label>
         </div>
 
         <div class="submit-btn" id="submit-btn">
-          <button type="submit">Đăng ký tài khoản</button>
+          <button type="submit">Đăng ký</button>
         </div>
       </form>
     </div>
@@ -84,41 +82,73 @@
       const checkbox = document.getElementById("agree-terms");
       const submitBtn = document.getElementById("submit-btn");
 
+      // Hiển thị nút đăng ký khi tick điều khoản
       checkbox.addEventListener("change", () => {
         submitBtn.style.display = checkbox.checked ? "block" : "none";
       });
 
-      // document
-      //   .getElementById("register-form")
-      //   .addEventListener("submit", function (e) {
-      //     e.preventDefault();
-      //     alert("🎉 Đăng ký thành công!");
-      //     // Bạn có thể thêm xử lý lưu vào localStorage tại đây nếu cần
-      //   });
       document
         .getElementById("register-form")
         .addEventListener("submit", function (e) {
           e.preventDefault();
 
+          const username = document.getElementById("username").value.trim();
+          const email = document.getElementById("email").value.trim();
           const password = document.getElementById("password").value.trim();
           const confirmPassword = document
             .getElementById("confirm-password")
             .value.trim();
+          const fullname = document.getElementById("fullname").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+
+          if (!username || !email || !password || !confirmPassword) {
+            alert("❗ Vui lòng điền đầy đủ thông tin bắt buộc!");
+            return;
+          }
 
           if (password !== confirmPassword) {
             alert("❌ Mật khẩu và xác nhận mật khẩu không khớp!");
             return;
           }
 
-          if (!document.getElementById("agree-terms").checked) {
-            alert("❗ Bạn phải đồng ý với điều khoản để đăng ký.");
+          if (password.length < 6) {
+            alert("❗ Mật khẩu phải có ít nhất 6 ký tự!");
             return;
           }
 
-          // Nếu mọi thứ hợp lệ, tiếp tục đăng ký
+          if (!checkbox.checked) {
+            alert("❗ Bạn phải đồng ý với điều khoản sử dụng!");
+            return;
+          }
+
+          // Lấy danh sách tài khoản từ localStorage
+          let users = JSON.parse(localStorage.getItem("users")) || [];
+
+          // Kiểm tra tên đăng nhập đã tồn tại chưa
+          const usernameExists = users.some(
+            (user) => user.username === username
+          );
+          if (usernameExists) {
+            alert("❗ Tên đăng nhập đã tồn tại. Vui lòng chọn tên khác.");
+            return;
+          }
+
+          // Tạo tài khoản mới
+          const newUser = {
+            username,
+            email,
+            password,
+            fullname,
+            phone,
+          };
+
+          users.push(newUser);
+          localStorage.setItem("users", JSON.stringify(users));
+
           alert("🎉 Đăng ký thành công!");
           window.location.href = "dangnhap.html";
-          // Thêm xử lý lưu localStorage tại đây nếu cần
+          this.reset();
+          submitBtn.style.display = "none";
         });
     </script>
   </body>
