@@ -39,29 +39,55 @@
       </form>
     </div>
     <script>
+      // Hiển thị/ẩn mật khẩu
+      function togglePassword(inputId, icon) {
+        const input = document.getElementById(inputId);
+        const isPassword = input.type === "password";
+        input.type = isPassword ? "text" : "password";
+        icon.innerHTML = isPassword
+          ? '<i class="fa-solid fa-eye-slash"></i>'
+          : '<i class="fa-solid fa-eye"></i>';
+      }
+
+      // Tự động điền tài khoản nếu đã ghi nhớ
+      window.onload = () => {
+        const remembered = localStorage.getItem("rememberedUsername");
+        if (remembered) {
+          document.getElementById("login-username").value = remembered;
+          document.getElementById("remember-me").checked = true;
+        }
+      };
+
+      // Xử lý đăng nhập
       document
         .getElementById("login-form")
         .addEventListener("submit", function (e) {
           e.preventDefault();
+
           const username = document
             .getElementById("login-username")
             .value.trim();
           const password = document.getElementById("login-password").value;
 
-          const storedUser = JSON.parse(localStorage.getItem("user"));
+          const users = JSON.parse(localStorage.getItem("users")) || [];
 
-          if (!storedUser) {
-            alert(
-              "❌ Không có tài khoản nào đã đăng ký. Vui lòng đăng ký trước!"
-            );
-            return;
-          }
+          // Tìm người dùng trùng username + password
+          const foundUser = users.find(
+            (user) => user.username === username && user.password === password
+          );
 
-          if (
-            username === storedUser.username &&
-            password === storedUser.password
-          ) {
+          if (foundUser) {
+            // Lưu đăng nhập
             localStorage.setItem("loggedInUser", username);
+
+            // Ghi nhớ nếu được chọn
+            if (document.getElementById("remember-me").checked) {
+              localStorage.setItem("rememberedUsername", username);
+            } else {
+              localStorage.removeItem("rememberedUsername");
+            }
+
+            alert("🎉 Đăng nhập thành công!");
             window.location.href = "index.html";
           } else {
             alert("❌ Tên đăng nhập hoặc mật khẩu không đúng!");
