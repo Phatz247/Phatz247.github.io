@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh mục sản phẩm - MENSTA</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <script src="script.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="topbar-container">
+        <div class="topbar-left">
+          <a href="#" class="topbar-link"
+            ><i class="fas fa-phone-alt"></i> Hotline: 0999.999.999</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.jpg" alt="Shoppe Logo" /></a>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="header-icons">
+        <a href="#" class="header-icon-item">
+          <i class="fas fa-user"></i>
+          <span>Tài khoản</span>
+        </a>
+        <a href="shoppingcart.html" class="header-icon-item">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Giỏ hàng</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-nav-bar">
+      <div class="main-nav-container">
+        <ul class="main-nav-list">
+          <li><a href="index.html">TRANG CHỦ</a></li>
+          <li><a href="introduce.html">GIỚI THIỆU</a></li>
+          <li class="dropdown">
+            <a href="menshirt.html">ÁO NAM <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="shirt.html">Áo sơ mi</a></li>
+              <li><a href="polo.html">Áo Polo</a></li>
+              <li><a href="t_shirt.html">Áo thun</a></li>
+              <li><a href="coat.html">Áo khoác</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="menpants.html">QUẦN NAM <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="jean.html">Quần jeans</a></li>
+              <li><a href="trousers.html">Quần tây</a></li>
+              <li><a href="kakipants.html">Quần kaki</a></li>
+              <li><a href="short.html">Quần short</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="accessory.html">PHỤ KIỆN <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="wallet.html">Ví da</a></li>
+              <li><a href="belt.html">Thắt lưng</a></li>
+              <li><a href="tie.html">Cà vạt và nơ</a></li>
+              <li><a href="hat.html">Mũ nón</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <a href="category.html">Danh mục</a>
+        <span>/</span>
+        <span>Áo Nam</span>
+      </div>
+
+      <h1 class="page-title">ÁO NAM</h1>
+
+      <div class="main-flex">
+
+          <div class="product-grid-quan">
+          <!-- Product 1 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+  'Áo Sơ Mi Trắng Sọc Form Tailored SM180',
+  'img/shirt1.jpg',
+  '445000', 
+  [
+    {image: 'img/shirt1.jpg', name: 'Trắng Sọc', price: 445000, title: 'Áo Sơ Mi Trắng Sọc Form Tailored SM180'},
+    {image: 'img/shirt1_thumb1.jpg', name: 'Xanh Sọc', price: 460000, title: 'Áo Sơ Mi Xanh Sọc Form Tailored SM180'}
+  ], 'ao'
+)"
+              style="cursor: pointer"
+            >
+              <span class="badge">-20%</span>
+              <img src="img/shirt1.jpg" alt="Áo Sơ Mi Sọc Thêu Huy Hiệu" />
+              <div class="product-title">
+                Áo Sơ Mi Trắng Sọc Form Tailored SM180
+              </div>
+              <div class="price">
+                <span class="new-price">445.000 ₫</span>
+                <span class="old-price">556.250 ₫</span>
+              </div>
+              
+            </div>
+
+        
+          <!-- Product 2 -->
+          <div
+            class="product-card"
+            onclick="goToDetail(
+  'Áo Sơ Mi Tay Ngắn 2 Túi Regular Màu Be SM164',
+  'img/shirt2.jpg',
+  '415000',
+  [
+    {image: 'img/shirt2.jpg', name: 'Be', price: 415000, title: 'Áo Sơ Mi Tay Ngắn 2 Túi Regular SM164 Màu Be'},
+    {image: 'img/shirt2_thumb1.jpg', name: 'Xanh', price: 420000, title: 'Áo Sơ Mi Tay Ngắn 2 Túi Regular SM164 Màu Xanh Lá'},
+    {image: 'img/shirt2_thumb2.jpg', name: 'Nâu', price: 430000, title: 'Áo Sơ Mi Tay Ngắn 2 Túi Regular SM164 Màu Nâu'}
+  ], 'ao'
+)"
+          >
+            <div class="badge new">New</div>
+
+            <img
+              src="img/shirt2.jpg"
+              alt="Áo Sơ Mi Tay Ngắn 2 Túi Regular"
+              id="main-img-2"
+            />
+            <div class="product-title" id="product-title-2">
+              Áo Sơ Mi Tay Ngắn 2 Túi Regular SM164 Màu Be
+            </div>
+            <div class="price" id="product-price-2">
+              <span class="new-price">415.000 ₫</span>
+            </div>
+          </div>
+
+
+            <!-- Product 3 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+  'Áo Sơ Mi Đen Form Regular SM103', 'img/shirt3.jpg', '425000',
+  [
+    {image: 'img/shirt3.jpg', name: 'Đen', price: 425000, title: 'Áo Sơ Mi Đen Form Regular SM103'},
+    {image: 'img/shirt3_thumb1.jpg', name: 'Trắng', price: 430000, title: 'Áo Sơ Mi Xanh Form Regular SM103'},
+    {image: 'img/shirt3_thumb2.jpg', name: 'Xám', price: 440000, title: 'Áo Sơ Mi Xám Form Regular SM103'}
+  ], 'ao'
+)"
+              style="cursor: pointer"
+            >
+            
+              <img src="img/shirt3.jpg" alt="Áo Sơ Mi Đen Form Regular" />
+              <div class="product-title">Áo Sơ Mi Đen Form Regular SM103</div>
+              <div class="price">
+                <span class="new-price">425.000 ₫</span>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+          <div
+            class="product-card"
+            onclick="goToDetail(
+  'Áo Sơ Mi Caro Xanh Đen SM104',
+  'img/shirt4.jpg',
+  '405000',
+  [
+    {image: 'img/shirt4.jpg', name: 'Xanh Đen', price: 405000, title: 'Áo Sơ Mi Caro SM104 Màu Xanh Đen'}
+  ], 'ao'
+)"
+          >
+            <div class="badge new">New</div>
+
+            <img
+              src="img/shirt4.jpg"
+              alt="Áo Sơ Mi Oxford Thêu Hình Mỏ Neo Xanh"
+              id="main-img-4"
+            />
+            <div class="product-title" id="product-title-4">
+              Áo Sơ Mi Caro SM104 Màu Xanh Đen
+            </div>
+            <div class="price" id="product-price-4">
+              <span class="new-price">405.000 ₫</span>
+            </div>
+          </div>
+             <!-- Product 5 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+    'Áo Polo Trơn PO101 Màu Xanh Navy',
+    'img/polo1.jpg',
+    '295000',
+    [
+      {image: 'img/polo1.jpg', name: 'Xanh Navy', price: 295000, title: 'Áo Polo Trơn PO101 Màu Xanh Navy'},
+      {image: 'img/polo1_thumb1.jpg', name: 'Nâu', price: 295000, title: 'Áo Polo Trơn PO101 Màu Nâu'}
+    ], 'ao'
+  )"
+              style="cursor: pointer"
+            >
+              <span class="badge">-10%</span>
+              <img src="img/polo1.jpg" alt="Áo Polo Trơn" />
+              <div class="product-title">Áo Polo Trơn PO101 Màu Xanh Navy</div>
+              <div class="price">
+                <span class="new-price">295.000 ₫</span>
+                <span class="old-price">327.777 ₫</span>
+              </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+    'Áo Polo Rayon Phối 2 Sọc Ở Vai Form Regular PO158 Màu Trắng',
+    'img/polo2.jpg',
+    '315000',
+    [
+      {image: 'img/polo2.jpg', name: 'Trắng', price: 315000, title: 'Áo Polo Rayon Phối 2 Sọc Ở Vai Form Regular PO158 Màu Trắng'},
+      {image: 'img/polo2_thumb1.jpg', name: 'Be', price: 315000, title: 'Áo Polo Rayon Phối 2 Sọc Ở Vai Form Regular PO158 Màu Be'}
+    ], 'ao'
+  )"
+              style="cursor: pointer"
+            >
+              <img src="img/polo2.jpg" alt="Áo Polo Rayon" />
+              <div class="product-title">
+                Áo Polo Rayon Phối 2 Sọc Ở Vai Form Regular PO158 Màu Trắng
+              </div>
+              <div class="price">
+                <span class="new-price">315.000 ₫</span>
+              </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+    'Áo Polo In Logo Tròn PO103 Màu Xanh Đá',
+    'img/polo3.jpg',
+    '325000',
+    [
+      {image: 'img/polo3.jpg', name: 'Xanh Đá', price: 325000, title: 'Áo Polo In Logo Tròn PO103 Màu Xanh Đá'},
+      {image: 'img/polo3_thumb1.jpg', name: 'Trắng', price: 325000, title: 'Áo Polo In Logo Tròn PO103 Màu Trắng'}
+    ], 'ao'
+  )"
+              style="cursor: pointer"
+            >
+              <span class="badge new">New</span>
+              <img src="img/polo3.jpg" alt="Áo Polo In Logo Tròn" />
+              <div class="product-title">
+                Áo Polo In Logo Tròn PO103 Màu Xanh Đá
+              </div>
+              <div class="price">
+                <span class="new-price">325.000 ₫</span>
+              </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+    'Áo Polo In Hình Bánh Lái PO104 Màu Trắng',
+    'img/polo4.jpg',
+    '305000',
+    [
+      {image: 'img/polo4.jpg', name: 'Trắng', price: 305000, title: 'Áo Polo In Hình Bánh Lái PO104 Màu Trắng'},
+      {image: 'img/polo4_thumb1.jpg', name: 'Xanh Navy', price: 305000, title: 'Áo Polo In Hình Bánh Lái PO104 Màu Xanh Navy'}
+    ], 'ao'
+  )"
+              style="cursor: pointer"
+            >
+              <img src="img/polo4.jpg" alt="Áo Polo In Hình Bánh Lái" />
+              <div class="product-title">
+                Áo Polo In Hình Bánh Lái PO104 Màu Trắng
+              </div>
+              <div class="price">
+                <span class="new-price">305.000 ₫</span>
+              </div>
+            </div>
+                   <!-- Product 9: Áo Thun In Chữ Wave To The Beach TS101 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+  'Áo Thun In Chữ Wave To The Beach TS101 Màu Rêu',
+  'img/tshirt1.jpg',
+  '185000',
+  [
+    {
+      image: 'img/tshirt1.jpg',
+      name: 'Rêu',
+      price: 185000,
+      title: 'Áo Thun In Chữ Wave To The Beach TS101 Màu Rêu'
+    },
+    {
+      image: 'img/tshirt1_thumb1.jpg',
+      name: 'Trắng',
+      price: 185000,
+      title: 'Áo Thun In Chữ Wave To The Beach TS101 Màu Trắng'
+    }
+  ], 'ao'
+)"
+            >
+              <span class="badge">-23%</span>
+              <img
+                src="img/tshirt1.jpg"
+                alt="Áo Thun In Chữ Wave To The Beach"
+              />
+              <div class="product-title">
+                Áo Thun In Chữ Wave To The Beach TS101 Màu Rêu
+              </div>
+              <div class="price">
+                <span class="new-price">185.000 ₫</span>
+                <span class="old-price">240.260 ₫</span>
+              </div>
+             
+            </div>
+
+            <!-- Product 10: Just Be Cool -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+  'Áo Thun In Chữ Just Be Cool TS102 Màu Xanh Đen',
+  'img/tshirt2.jpg',
+  '195000',
+  [
+    {
+      image: 'img/tshirt2.jpg',
+      name: 'Xanh Đen',
+      price: 195000,
+      title: 'Áo Thun In Chữ Just Be Cool TS102 Màu Xanh Đen'
+    },
+    {
+      image: 'img/tshirt2_thumb1.jpg',
+      name: 'Trắng',
+      price: 195000,
+      title: 'Áo Thun In Chữ Just Be Cool TS102 Màu Trắng'
+    }
+  ], 'ao'
+)"
+            >
+              <img src="img/tshirt2.jpg" alt="Áo Thun In Chữ Just Be Cool" />
+              <div class="product-title">
+                Áo Thun In Chữ Just Be Cool TS102 Màu Xanh Đen
+              </div>
+              <div class="price">
+                <span class="new-price">195.000 ₫</span>
+              </div>
+           
+            </div>
+
+            <!-- Product 11: Lóc Xoáy -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+  'Áo Thun In Hình Lóc Xoáy TS103 Màu Xanh Rêu',
+  'img/tshirt3.jpg',
+  '205000',
+  [
+    {
+      image: 'img/tshirt3.jpg',
+      name: 'Xanh Rêu',
+      price: 205000,
+      title: 'Áo Thun In Hình Lóc Xoáy TS103 Màu Xanh Rêu'
+    },
+    {
+      image: 'img/tshirt3_thumb1.jpg',
+      name: 'Xám',
+      price: 205000,
+      title: 'Áo Thun In Hình Lóc Xoáy TS103 Màu Xám'
+    }
+  ], 'ao'
+)"
+            >
+               <span class="badge new">New</span>
+
+              <img src="img/tshirt3.jpg" alt="Áo Thun In Hình Lóc Xoáy" />
+              <div class="product-title">
+                Áo Thun In Hình Lóc Xoáy TS103 Màu Xanh Rêu
+              </div>
+              <div class="price">
+                <span class="new-price">205.000 ₫</span>
+              </div>
+            
+            </div>
+
+            <!-- Product 12: Sọc TS104 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+  'Áo Thun Sọc TS104',
+  'img/tshirt4.jpg',
+  '215000',
+  [
+    {
+      image: 'img/tshirt4.jpg',
+      name: 'Sọc Đen Trắng',
+      price: 215000,
+      title: 'Áo Thun Sọc TS104'
+    }
+  ], 'ao'
+)"
+            >
+              <img src="img/tshirt4.jpg" alt="Áo Thun Sọc" />
+              <div class="product-title">Áo Thun Sọc TS104</div>
+              <div class="price">
+                <span class="new-price">215.000 ₫</span>
+              </div>
+            </div>
+                    <!-- Product 13 -->
+<div
+  class="product-card"
+  onclick="goToDetail(
+    'Áo Khoác KaKi Business COAT101 Màu đen',
+    'img/coat1.jpg',
+    '495000',
+    [
+      {image: 'img/coat1.jpg', name: 'Đen', price: 495000, title: 'Áo Khoác KaKi Business COAT101 Màu Đen'},
+      {image: 'img/coat1_thumb1.jpg', name: 'Be', price: 495000, title: 'Áo Khoác KaKi Business COAT101 Màu Be'}
+    ], 'ao'
+  )"
+  style="cursor: pointer"
+>
+  <span class="badge">-10%</span>
+  <img src="img/coat1.jpg" alt="Áo Khoác KaKi Business COAT101 Màu Đen" />
+  <div class="product-title">Áo Khoác KaKi Business COAT101</div>
+  <div class="price">
+    <span class="new-price">495.000 ₫</span>
+    <span class="old-price">550.000 ₫</span>
+  </div>
+</div>
+
+<!-- Product 14 -->
+<div
+  class="product-card"
+  onclick="goToDetail(
+    'Áo Khoác Dù Chống Nắng UV-PROX Trơn COAT102 Màu Xanh Đen',
+    'img/coat2.jpg',
+    '525000',
+    [
+      {image: 'img/coat2.jpg', name: 'Xanh Đen', price: 525000, title: 'Áo Khoác Dù Chống Nắng UV-PROX Trơn COAT102 Màu Xanh Đen'},
+      {image: 'img/coat2_thumb1.jpg', name: 'Xanh Rêu', price: 525000, title: 'Áo Khoác Dù Chống Nắng UV-PROX Trơn COAT102 Màu Xanh Rêu'}
+    ], 'ao'
+  )"
+  style="cursor: pointer"
+>
+  <img src="img/coat2.jpg" alt="Áo Khoác Dù Chống Nắng UV-PROX Trơn COAT102 Màu Xanh Đen" />
+  <div class="product-title">Áo Khoác Dù Chống Nắng UV-PROX Trơn COAT102</div>
+  <div class="price">
+    <span class="new-price">525.000 ₫</span>
+  </div>
+</div>
+
+<!-- Product 15 -->
+<div
+  class="product-card"
+  onclick="goToDetail(
+    'Áo Khoác Dù Chống Nắng UV-PROX Túi Hợp COAT103 Màu Đen',
+    'img/coat3.jpg',
+    '455000',
+    [
+      {image: 'img/coat3.jpg', name: 'Đen', price: 455000, title: 'Áo Khoác Dù Chống Nắng UV-PROX Túi Hợp COAT103 Màu Đen'},
+      {image: 'img/coat3_thumb1.jpg', name: 'Be', price: 455000, title: 'Áo Khoác Dù Chống Nắng UV-PROX Túi Hợp COAT103 Màu Be'}
+    ], 'ao'
+  )"
+  style="cursor: pointer"
+>
+  <span class="badge new">New</span>
+  <img src="img/coat3.jpg" alt="Áo Khoác Dù Chống Nắng UV-PROX Túi Hợp COAT103 Màu Đen" />
+  <div class="product-title">Áo Khoác Dù Chống Nắng UV-PROX Túi Hợp COAT103</div>
+  <div class="price">
+    <span class="new-price">455.000 ₫</span>
+  </div>
+</div>
+
+<!-- Product 16 -->
+<div
+  class="product-card"
+  onclick="goToDetail(
+    'Áo Khoác Dù Chống Nắng 1 Lớp COAT104 Màu Xám Nhạt',
+    'img/coat4.jpg',
+    '375000',
+    [
+      {image: 'img/coat4.jpg', name: 'Xám Nhạt', price: 375000, title: 'Áo Khoác Dù Chống Nắng 1 Lớp COAT104 Màu Xám Nhạt'},
+      {image: 'img/coat4_thumb1.jpg', name: 'Đen', price: 375000, title: 'Áo Khoác Dù Chống Nắng 1 Lớp COAT104 Màu Đen'},
+      {image: 'img/coat4_thumb2.jpg', name: 'Nâu', price: 375000, title: 'Áo Khoác Dù Chống Nắng 1 Lớp COAT104 Màu Nâu'}
+    ], 'ao'
+  )"
+  style="cursor: pointer"
+>
+  <span class="badge">-25%</span>
+  <img src="img/coat4.jpg" alt="Áo Khoác Dù Chống Nắng 1 Lớp COAT104 Màu Xám Nhạt" />
+  <div class="product-title">Áo Khoác Dù Chống Nắng 1 Lớp COAT104 COAT104 Màu Xám Nhạt</div>
+  <div class="price">
+    <span class="new-price">375.000 ₫</span>
+    <span class="old-price">500.000 ₫</span>
+  </div>
+</div>
+
+          </div>
+        </section>
+      </div>
+    </main>
+
+  <!-- Footer -->
+    <footer class="footer-full-black">
+      <div class="footer-container">
+        <div class="footer-col">
+          <img src="img/logo1.jpg" alt="MENSTA" class="logo-footer" />
+          <ul>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><i class="fa fa-envelope"></i> Email: info@mensta.com</li>
+            <li><i class="fa fa-phone"></i> Hotline: 0999.999.999</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">HỖ TRỢ KHÁCH HÀNG</div>
+          <ul>
+            <li><a href="#">Hướng dẫn đặt hàng</a></li>
+            <li><a href="#">Hướng dẫn chọn size</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+            <li><a href="#">Chính sách khách VIP</a></li>
+            <li><a href="#">Thanh toán - Giao hàng</a></li>
+            <li><a href="#">Chính sách bảo mật</a></li>
+            <li><a href="#">Chính sách cookie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">VỊ TRÍ CỬA HÀNG</div>
+          <img
+            src="img/map.jpg"
+            alt="Bản đồ cửa hàng"
+            style="
+              width: 100%;
+              max-width: 170px;
+              border-radius: 6px;
+              margin-bottom: 8px;
+            "
+          />
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">KẾT NỐI VỚI MENSTA</div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

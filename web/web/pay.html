@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trang Mua Hàng</title>
+    <link
+      rel="stylesheet"
+      href="css/pay.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <h1>THANH TOÁN</h1>
+    <div class="container">
+      <div class="product-image">
+        <img id="product-image" src="" alt="Sản phẩm" />
+      </div>
+      <div class="product-details">
+        <div class="product-title" id="product-title"></div>
+        <div class="product-price" id="product-price"></div>
+
+        <label>Chọn màu:</label>
+        <div id="color-options"></div>
+
+        <div id="size-section" style="display: none">
+          <label for="size">Chọn size:</label>
+          <select id="size"></select>
+        </div>
+
+        <label for="quantity">Số lượng:</label>
+        <input type="number" id="quantity" value="1" min="1" />
+
+        <div class="total-price" id="total"></div>
+
+        <div class="button-group">
+          <button class="order-button" onclick="placeOrder()">Đặt hàng</button>
+          <button class="cancel-button" onclick="history.back()">Hủy</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const product = JSON.parse(localStorage.getItem("selectedProduct"));
+      const defaultImage = product?.image;
+      let currentPrice = parseInt(product.price); // Đảm bảo giá dạng số
+
+      function updateTotal() {
+        const quantity = parseInt(document.getElementById("quantity").value);
+        const total = currentPrice * quantity;
+        document.getElementById("total").innerText =
+          "Tổng tiền: " + total.toLocaleString() + " ₫";
+      }
+
+      function placeOrder() {
+        const sizeSelect = document.getElementById("size");
+        const size =
+          sizeSelect && sizeSelect.value ? sizeSelect.value : "Không chọn";
+
+        const quantity = parseInt(document.getElementById("quantity").value);
+        const name = document.getElementById("product-title").innerText.trim();
+        const price = currentPrice;
+        const image = document.getElementById("product-image").src;
+
+        const productToSave = {
+          name: name,
+          price: price,
+          quantity: quantity,
+          size: size,
+          image: image,
+        };
+
+        // Lấy giỏ hàng hiện tại
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Tìm sản phẩm trùng tên và size
+        const existingIndex = cart.findIndex(
+          (item) =>
+            item.name === productToSave.name && item.size === productToSave.size
+        );
+
+        if (existingIndex !== -1) {
+          cart[existingIndex].quantity += quantity;
+        } else {
+          cart.push(productToSave);
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        const formattedPrice =
+          (price * quantity).toLocaleString("vi-VN") + " ₫";
+
+        alert(
+          `🛒 Đặt hàng thành công!\n\n` +
+            `🧾 Sản phẩm: ${name}\n` +
+            `📦 Số lượng: ${quantity}\n` +
+            `📐 Size: ${size}\n` +
+            `💰 Tổng tiền: ${formattedPrice}`
+        );
+
+        history.back(); // hoặc chuyển hướng: window.location.href = "trang-gio-hang.html";
+      }
+
+      if (product) {
+        document.getElementById("product-title").innerText = product.title;
+        document.getElementById("product-image").src = product.image;
+        document.getElementById("product-price").innerText =
+          parseInt(product.price).toLocaleString() + " ₫";
+        updateTotal();
+
+        showSizeOptions(product.type); // <--- gọi ở đây
+      }
+
+      document
+        .getElementById("quantity")
+        .addEventListener("input", updateTotal);
+
+      const colorContainer = document.getElementById("color-options");
+      if (product.colors && Array.isArray(product.colors)) {
+        product.colors.forEach((color) => {
+          const img = document.createElement("img");
+          img.src = color.image;
+          img.alt = color.name;
+          img.title = color.name;
+
+          img.onclick = () => {
+            document.getElementById("product-image").src = color.image;
+            document.getElementById("product-title").innerText = color.title;
+            document.getElementById("product-price").innerText =
+              parseInt(color.price).toLocaleString() + " ₫";
+
+            currentPrice = parseInt(color.price);
+            updateTotal();
+
+            document
+              .querySelectorAll("#color-options img")
+              .forEach((el) => el.classList.remove("selected"));
+            img.classList.add("selected");
+          };
+
+          colorContainer.appendChild(img);
+        });
+      }
+
+      function showSizeOptions(type) {
+        const sizeSection = document.getElementById("size-section");
+        const sizeSelect = document.getElementById("size");
+
+        if (!type) {
+          sizeSection.style.display = "none";
+          return;
+        }
+
+        sizeSelect.innerHTML = ""; // clear các lựa chọn cũ
+
+        if (type === "ao") {
+          ["S", "M", "L", "XL"].forEach((size) => {
+            const option = document.createElement("option");
+            option.value = size;
+            option.innerText = size;
+            sizeSelect.appendChild(option);
+          });
+          sizeSection.style.display = "block";
+        } else if (type === "quan") {
+          ["29", "30", "31", "32", "34"].forEach((size) => {
+            const option = document.createElement("option");
+            option.value = size;
+            option.innerText = size;
+            sizeSelect.appendChild(option);
+          });
+          sizeSection.style.display = "block";
+        } else {
+          // phukien thì không hiển thị size
+          sizeSection.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoppe - Thời trang nam</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <script src="script.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Thêm font Roboto nếu muốn -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="topbar-container">
+        <div class="topbar-left">
+          <a href="#" class="topbar-link"
+            ><i class="fas fa-phone-alt"></i> Hotline: 0999.999.999</a
+          >
+
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.jpg" alt="Shoppe Logo" /></a>
+      </div>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Tìm kiếm sản phẩm..."
+        />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="header-icons">
+        <a href="" class="header-icon-item">
+          <i class="fas fa-user"></i>
+          <span>Tài khoản</span>
+        </a>
+        <a href="shoppingcart.html" class="header-icon-item">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Giỏ hàng</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-nav-bar">
+      <div class="main-nav-container">
+        <ul class="main-nav-list">
+          <li><a href="index.html">TRANG CHỦ</a></li>
+          <li><a href="introduce.html">GIỚI THIỆU</a></li>
+          <li class="dropdown">
+            <a href="menshirt.html "
+              >ÁO NAM <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="shirt.html">Áo sơ mi</a></li>
+              <li><a href="polo.html">Áo Polo</a></li>
+              <li><a href="t_shirt.html">Áo thun</a></li>
+              <li><a href="coat.html">Áo khoác</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="menpants.html"
+              >QUẦN NAM <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="jean.html">Quần jeans</a></li>
+              <li><a href="trousers.html">Quần tây</a></li>
+              <li><a href="kakipants.html">Quần kaki</a></li>
+              <li><a href="short.html">Quần short</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="accessory.html"
+              >PHỤ KIỆN <i class="fas fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li><a href="wallet.html">Ví da</a></li>
+              <li><a href="belt.html">Thắt lưng</a></li>
+              <li><a href="tie.html">Cà vạt và nơ</a></li>
+              <li><a href="hat.html">Mũ nón</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <!-- Banner Carousel -->
+      <section class="banner-carousel">
+        <div class="carousel-track">
+          <img
+            src="img/banner.jpg"
+            alt="Banner khuyến mãi"
+            class="carousel-img active"
+          />
+          <img
+            src="img/banner1.jpg"
+            alt="Banner thời trang mới"
+            class="carousel-img"
+          />
+          <img
+            src="img/banner2.jpg"
+            alt="Banner sale off"
+            class="carousel-img"
+          />
+        </div>
+        <button class="carousel-btn prev" aria-label="Ảnh trước">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn next" aria-label="Ảnh sau">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="carousel-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </div>
+      </section>
+
+      <!-- Hot Products -->
+      <section class="products-section">
+        <h2 class="section-title">THỜI TRANG HOT NHẤT</h2>
+        <div class="product-grid">
+          <!-- Product 1 -->
+          <div
+            class="product-card"
+            id="product9"
+            onclick="goToDetail(
+  'Áo Thun In Chữ Wave To The Beach TS101 Màu Rêu',
+  'img/tshirt1.jpg',
+  '185000',
+  [
+    {
+      image: 'img/tshirt1.jpg',
+      name: 'Rêu',
+      price: 185000,
+      title: 'Áo Thun In Chữ Wave To The Beach TS101 Màu Rêu'
+    },
+    {
+      image: 'img/tshirt1_thumb1.jpg',
+      name: 'Trắng',
+      price: 185000,
+      title: 'Áo Thun In Chữ Wave To The Beach TS101 Màu Trắng'
+    }
+  ], 'ao'
+)"
+          >
+            <img
+              src="img/tshirt1.jpg"
+              alt="Áo Thun In Chữ Wave To The Beach"
+              id="main-img-9"
+            />
+            <div class="product-title" id="product-title-9">
+              Áo Thun In Chữ Wave To The Beach TS101 Màu Rêu
+            </div>
+            <div class="price" id="product-price-9">
+              <span class="new-price">185.000 ₫</span>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="product-card"
+            id="product24"
+            onclick="goToDetail(
+  'Quần Tây Lưng Thun TROUSER104 Màu Xanh Lá',
+  'img/trouser4.jpg',
+  '335000',
+  [
+    {image: 'img/trouser4.jpg', name: 'Xanh Lá', price: 335000, title: 'Quần Tây Lưng Thun TROUSER104 Màu Xanh Lá'}
+  ], 'quan'
+)"
+          >
+            <img
+              src="img/trouser4.jpg"
+              alt="Quần Tây Lưng Thun"
+              id="main-img-24"
+            />
+            <div class="product-title" id="product-title-24">
+              Quần Tây Lưng Thun TROUSER104 Màu Xanh
+            </div>
+            <div class="price" id="product-price-24">
+              <span class="new-price">335.000 ₫</span>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="product-card"
+            id="product6"
+            onclick="goToDetail(
+    'Áo Polo Rayon Phối 2 Sọc Ở Vai Form Regular PO158 Màu Trắng',
+    'img/polo2.jpg',
+    '315000',
+    [
+      {image: 'img/polo2.jpg', name: 'Trắng', price: 315000, title: 'Áo Polo Rayon Phối 2 Sọc Ở Vai Form Regular PO158 Màu Trắng'},
+      {image: 'img/polo2_thumb1.jpg', name: 'Be', price: 315000, title: 'Áo Polo Rayon Phối 2 Sọc Ở Vai Form Regular PO158 Màu Be'}
+    ], 'ao'
+  )"
+          >
+            <img
+              src="img/polo2.jpg"
+              alt="Áo Polo Trắng Cổ Phối 2 Sọc Ở Vai Form Regular"
+              id="main-img-6"
+            />
+            <div class="product-title" id="product-title-6">
+              Áo Polo Rayon Phối 2 Sọc Ở Vai Form Regular PO158 Màu Trắng
+            </div>
+            <div class="price" id="product-price-6">
+              <span class="new-price">315.000 ₫</span>
+            </div>
+          </div>
+          <!-- Product 4 -->
+          <div
+            class="product-card"
+            id="product20"
+            onclick="goToDetail(
+  'Quần Jean MS JEAN104 Màu Nâu',
+  'img/jean4.jpg',
+  '365000',
+  [
+    {image: 'img/jean4.jpg', name: 'Nâu', price: 365000, title: 'Quần Jean MS JEAN104 Màu Nâu'},
+    {image: 'img/jean4_thumb1.jpg', name: 'Đen', price: 365000, title: 'Quần Jean MS JEAN104 Màu Đen'}
+  ], 'quan'
+)"
+          >
+            <img src="img/jean4.jpg" alt="Quần Jean Thêu MS" id="main-img-20" />
+            <div class="product-title" id="product-title-20">
+              Quần Jean Thêu 4M JEAN104 Màu Be
+            </div>
+            <div class="price" id="product-price-20">
+              <span class="new-price">365.000 ₫</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Products Section -->
+      <section class="products-section">
+        <h2 class="section-title">THỜI TRANG MỚI NHẤT</h2>
+        <div class="product-grid">
+          <!-- Đổi từ product-grid-4 thành product-grid để dùng chung style -->
+          <!-- Product 1 -->
+          <div
+            class="product-card"
+            onclick="goToDetail(
+  'Quần Jean Wash Bạc Màu JEAN102 Xanh Biển Đậm',
+  'img/jean2.jpg',
+  '370000',
+  [
+    {image: 'img/jean2.jpg', name: 'Xanh Biển Đậm', price: 370000, title: 'Quần Jean Wash Bạc Màu JEAN102 Xanh Biển Đậm'},
+    {image: 'img/jean2_thumb1.jpg', name: 'Xanh Đen', price: 370000, title: 'Quần Jean Wash Bạc Màu JEAN102 Xanh Đen'}
+  ], 'quan'
+)"
+          >
+            <div class="badge new">New</div>
+
+            <img
+              src="img/jean2.jpg"
+              alt="Quần Jean Wash Bạc Màu"
+              id="main-img-18"
+            />
+            <div class="product-title" id="product-title-18">
+              Quần Jean Wash Bạc Màu JEAN102 Màu Xanh Biển Đậm
+            </div>
+            <div class="price" id="product-price-18">
+              <span class="new-price">370.000 ₫</span>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="product-card"
+            onclick="goToDetail(
+  'Quần Kaki Nhung Tắm Lưng Thun KAKI104 Màu Nâu',
+  'img/kaki4.jpg',
+  '325000',
+  [
+    {image: 'img/kaki4.jpg', name: 'Nâu', price: 325000, title: 'Quần Kaki Nhung Tắm Lưng Thun KAKI104 Màu Nâu'}
+  ], 'quan'
+)"
+          >
+            <div class="badge new">New</div>
+
+            <img
+              src="img/kaki4.jpg"
+              alt="Quần Kaki Nhung Tăm Lưng Thun"
+              id="main-img-28"
+            />
+            <div class="product-title" id="product-title-28">
+              Quần Kaki Nhung Tắm Lưng Thun KAKI104 Màu Nâu
+            </div>
+            <div class="price" id="product-price-28">
+              <span class="new-price">325.000 ₫</span>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="product-card"
+            onclick="goToDetail(
+  'Quần Tây Slim Fit TROUSER101 Màu Trắng',
+  'img/trouser1.jpg',
+  '320000',
+  [
+    {image: 'img/trouser1.jpg', name: 'Trắng', price: 320000, title: 'Quần Tây Slim Fit TROUSER101 Màu Trắng'},
+    {image: 'img/trouser1_thumb1.jpg', name: 'Đen', price: 320000, title: 'Quần Tây Slim Fit TROUSER101 Màu Đen'},
+    {image: 'img/trouser1_thumb2.jpg', name: 'Be', price: 320000, title: 'Quần Tây Slim Fit TROUSER101 Màu Be'}
+  ], 'quan'
+)"
+          >
+            <div class="badge new">New</div>
+
+            <img
+              src="img/trouser1.jpg"
+              alt="Quần Tây Slim Fit"
+              id="main-img-21"
+            />
+            <div class="product-title" id="product-title-21">
+              Quần Tây Slim Fit TROUSER101 Màu Trắng
+            </div>
+            <div class="price" id="product-price-21">
+              <span class="new-price">320.000 ₫</span>
+            </div>
+          </div>
+          <!-- Product 4 -->
+          <div
+            class="product-card"
+            onclick="goToDetail(
+  'Quần Short Linen Trơn SHORT101 Màu Đen',
+  'img/short1.jpg',
+  '245000',
+  [
+    {image: 'img/short1.jpg', name: 'Đen', price: 245000, title: 'Quần Short Linen Trơn SHORT101 Màu Đen'},
+    {image: 'img/short1_thumb1.jpg', name: 'Nâu', price: 245000, title: 'Quần Short Linen Trơn SHORT101 Màu Nâu'}
+  ], 'quan'
+)"
+          >
+            <div class="badge new">New</div>
+
+            <img
+              src="img/short1.jpg"
+              alt="Quần Short Linen Trơn"
+              id="main-img-29"
+            />
+            <div class="product-title" id="product-title-29">
+              Quần Short Linen Trơn SHORT101 Màu Đen
+            </div>
+            <div class="price" id="product-price-29">
+              <span class="new-price">245.000 ₫</span>
+            </div>
+          </div>
+          <!-- Product 5 -->
+          <div
+            class="product-card"
+            onclick="goToDetail(
+  'Áo Thun In Hình Lóc Xoáy TS103 Màu Xanh Rêu',
+  'img/tshirt3.jpg',
+  '205000',
+  [
+    {
+      image: 'img/tshirt3.jpg',
+      name: 'Xanh Rêu',
+      price: 205000,
+      title: 'Áo Thun In Hình Lóc Xoáy TS103 Màu Xanh Rêu'
+    },
+    {
+      image: 'img/tshirt3_thumb1.jpg',
+      name: 'Xám',
+      price: 205000,
+      title: 'Áo Thun In Hình Lóc Xoáy TS103 Màu Xám'
+    }
+  ], 'ao'
+)"
+          >
+            <div class="badge new">New</div>
+
+            <img
+              src="img/tshirt3.jpg"
+              alt="Áo Thun In Hình Lóc Xoáy"
+              id="main-img-11"
+            />
+            <div class="product-title" id="product-title-11">
+              Áo Thun In Hình Lóc Xoáy TS103 Màu Xanh Rêu
+            </div>
+            <div class="price" id="product-price-11">
+              <span class="new-price">205.000 ₫</span>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div
+            class="product-card"
+            onclick="goToDetail(
+  'Áo Sơ Mi Tay Ngắn 2 Túi Regular Màu Be SM164',
+  'img/shirt2.jpg',
+  '415000',
+  [
+    {image: 'img/shirt2.jpg', name: 'Be', price: 415000, title: 'Áo Sơ Mi Tay Ngắn 2 Túi Regular SM164 Màu Be'},
+    {image: 'img/shirt2_thumb1.jpg', name: 'Xanh', price: 420000, title: 'Áo Sơ Mi Tay Ngắn 2 Túi Regular SM164 Màu Xanh Lá'},
+    {image: 'img/shirt2_thumb2.jpg', name: 'Nâu', price: 430000, title: 'Áo Sơ Mi Tay Ngắn 2 Túi Regular SM164 Màu Nâu'}
+  ], 'ao'
+)"
+          >
+            <div class="badge new">New</div>
+
+            <img
+              src="img/shirt2.jpg"
+              alt="Áo Sơ Mi Tay Ngắn 2 Túi Regular"
+              id="main-img-2"
+            />
+            <div class="product-title" id="product-title-2">
+              Áo Sơ Mi Tay Ngắn 2 Túi Regular SM164 Màu Be
+            </div>
+            <div class="price" id="product-price-2">
+              <span class="new-price">415.000 ₫</span>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div
+            class="product-card"
+            onclick="goToDetail(
+  'Quần Short Lưng Thun SHORT102 Màu Đen',
+  'img/short2.jpg',
+  '255000',
+  [
+    {image: 'img/short2.jpg', name: 'Đen', price: 255000, title: 'Quần Short Lưng Thun SHORT102 Màu Đen'},
+    {image: 'img/short2_thumb1.jpg', name: 'Xám', price: 255000, title: 'Quần Short Lưng Thun SHORT102 Màu Xám'}
+  ], 'quan'
+)"
+          >
+            <div class="badge new">New</div>
+
+            <img
+              src="img/short2.jpg"
+              alt="Quần Short Lưng Thun"
+              id="main-img-30"
+            />
+            <div class="product-title" id="product-title-30">
+              Quần Short Lưng Thun SHORT102 Màu Đen
+            </div>
+            <div class="price" id="product-price-30">
+              <span class="new-price">255.000 ₫</span>
+            </div>
+          </div>
+          <!-- Product 8 -->
+          <div
+            class="product-card"
+            onclick="goToDetail(
+  'Áo Sơ Mi Caro Xanh Đen SM104',
+  'img/shirt4.jpg',
+  '405000',
+  [
+    {image: 'img/shirt4.jpg', name: 'Xanh Đen', price: 405000, title: 'Áo Sơ Mi Caro SM104 Màu Xanh Đen'}
+  ], 'ao'
+)"
+          >
+            <div class="badge new">New</div>
+
+            <img
+              src="img/shirt4.jpg"
+              alt="Áo Sơ Mi Oxford Thêu Hình Mỏ Neo Xanh"
+              id="main-img-4"
+            />
+            <div class="product-title" id="product-title-4">
+              Áo Sơ Mi Caro SM104 Màu Xanh Đen
+            </div>
+            <div class="price" id="product-price-4">
+              <span class="new-price">405.000 ₫</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer-full-black">
+      <div class="footer-container">
+        <div class="footer-col">
+          <img src="img/logo1.jpg" alt="MENSTA" class="logo-footer" />
+          <ul>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><i class="fa fa-envelope"></i> Email: info@mensta.com</li>
+            <li><i class="fa fa-phone"></i> Hotline: 0999.999.999</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">HỖ TRỢ KHÁCH HÀNG</div>
+          <ul>
+            <li><a href="#">Hướng dẫn đặt hàng</a></li>
+            <li><a href="#">Hướng dẫn chọn size</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+            <li><a href="#">Chính sách khách VIP</a></li>
+            <li><a href="#">Thanh toán - Giao hàng</a></li>
+            <li><a href="#">Chính sách bảo mật</a></li>
+            <li><a href="#">Chính sách cookie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">VỊ TRÍ CỬA HÀNG</div>
+          <img
+            src="img/map.jpg"
+            alt="Bản đồ cửa hàng"
+            style="
+              width: 100%;
+              max-width: 170px;
+              border-radius: 6px;
+              margin-bottom: 8px;
+            "
+          />
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">KẾT NỐI VỚI MENSTA</div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh mục sản phẩm - MENSTA</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <script src="script.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="topbar-container">
+        <div class="topbar-left">
+          <a href="#" class="topbar-link"
+            ><i class="fas fa-phone-alt"></i> Hotline: 0999.999.999</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.jpg" alt="Shoppe Logo" /></a>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="header-icons">
+        <a href="#" class="header-icon-item">
+          <i class="fas fa-user"></i>
+          <span>Tài khoản</span>
+        </a>
+        <a href="shoppingcart.html" class="header-icon-item">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Giỏ hàng</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-nav-bar">
+      <div class="main-nav-container">
+        <ul class="main-nav-list">
+          <li><a href="index.html">TRANG CHỦ</a></li>
+          <li><a href="introduce.html">GIỚI THIỆU</a></li>
+          <li class="dropdown">
+            <a href="menshirt.html">ÁO NAM <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="shirt.html">Áo sơ mi</a></li>
+              <li><a href="polo.html">Áo Polo</a></li>
+              <li><a href="t_shirt.html">Áo thun</a></li>
+              <li><a href="coat.html">Áo khoác</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="menpants.html">QUẦN NAM <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="jean.html">Quần jeans</a></li>
+              <li><a href="trousers.html">Quần tây</a></li>
+              <li><a href="kakipants.html">Quần kaki</a></li>
+              <li><a href="short.html">Quần short</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="accessory.html">PHỤ KIỆN <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="wallet.html">Ví da</a></li>
+              <li><a href="belt.html">Thắt lưng</a></li>
+              <li><a href="tie.html">Cà vạt và nơ</a></li>
+              <li><a href="hat.html">Mũ nón</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <a href="category.html">Danh mục</a>
+        <span>/</span>
+        <span>Quần Jean</span>
+      </div>
+
+      <h1 class="page-title">QUẦN JEAN</h1>
+
+      <div class="main-flex">
+   
+
+          <div class="product-grid-quan">
+            <!-- Product 17 -->
+<div class="product-card" onclick="goToDetail(
+  'Quần Jean Slim Fit JEAN101 Màu Đen',
+  'img/jean1.jpg',
+  '350000',
+  [
+    {image: 'img/jean1.jpg', name: 'Đen', price: 350000, title: 'Quần Jean Slim Fit JEAN101 Màu Đen'},
+    {image: 'img/jean1_thumb1.jpg', name: 'Xanh Nhạt', price: 350000, title: 'Quần Jean Slim Fit JEAN101 Màu Xanh Nhạt'}
+  ], 'quan'
+)" style="cursor: pointer">
+  <img src="img/jean1.jpg" alt="Quần Jean Slim Fit JEAN101 Màu Đen" />
+  <div class="product-title">Quần Jean Slim Fit JEAN101 Màu Đen</div>
+  <div class="price"><span class="new-price">350.000 ₫</span></div>
+</div>
+
+<!-- Product 18 -->
+<div class="product-card" onclick="goToDetail(
+  'Quần Jean Wash Bạc Màu JEAN102 Xanh Biển Đậm',
+  'img/jean2.jpg',
+  '370000',
+  [
+    {image: 'img/jean2.jpg', name: 'Xanh Biển Đậm', price: 370000, title: 'Quần Jean Wash Bạc Màu JEAN102 Xanh Biển Đậm'},
+    {image: 'img/jean2_thumb1.jpg', name: 'Xanh Đen', price: 370000, title: 'Quần Jean Wash Bạc Màu JEAN102 Xanh Đen'}
+  ], 'quan'
+)" style="cursor: pointer">
+  <span class="badge new">New</span>
+
+  <img src="img/jean2.jpg" alt="Quần Jean Wash Bạc Màu JEAN102 Xanh Biển Đậm" />
+  <div class="product-title">Quần Jean Wash Bạc Màu JEAN102 Xanh Biển Đậm</div>
+  <div class="price">
+    <span class="new-price">370.000 ₫</span>
+  </div>
+</div>
+
+<!-- Product 19 -->
+<div class="product-card" onclick="goToDetail(
+  'Quần Jean Basic JEAN103 Màu Xanh Nhạt',
+  'img/jean3.jpg',
+  '360000',
+  [
+    {image: 'img/jean3.jpg', name: 'Xanh Nhạt', price: 360000, title: 'Quần Jean Basic JEAN103 Màu Xanh Nhạt'},
+    {image: 'img/jean3_thumb1.jpg', name: 'Xanh Đậm', price: 360000, title: 'Quần Jean Basic JEAN103 Màu Xanh Đậm'}
+  ], 'quan'
+)" style="cursor: pointer">
+  <img src="img/jean3.jpg" alt="Quần Jean Basic JEAN103 Màu Xanh Nhạt" />
+  <div class="product-title">Quần Jean Thêu Chữ M JEAN103 Màu Xanh Nhạt</div>
+  <div class="price"><span class="new-price">360.000 ₫</span></div>
+</div>
+
+<!-- Product 20 -->
+<div class="product-card" onclick="goToDetail(
+  'Quần Jean MS JEAN104 Màu Nâu',
+  'img/jean4.jpg',
+  '365000',
+  [
+    {image: 'img/jean4.jpg', name: 'Nâu', price: 365000, title: 'Quần Jean MS JEAN104 Màu Nâu'},
+    {image: 'img/jean4_thumb1.jpg', name: 'Đen', price: 365000, title: 'Quần Jean MS JEAN104 Màu Đen'}
+  ], 'quan'
+)" style="cursor: pointer">
+  <img src="img/jean4.jpg" alt="Quần Jean MS JEAN104 Màu Nâu" />
+  <div class="product-title">Quần Jean Thêu 4M JEAN104 Màu Nâu</div>
+  <div class="price"><span class="new-price">365.000 ₫</span></div>
+</div>
+
+          </div>
+        </section>
+      </div>
+    </main>
+
+   <!-- Footer -->
+    <footer class="footer-full-black">
+      <div class="footer-container">
+        <div class="footer-col">
+          <img src="img/logo1.jpg" alt="MENSTA" class="logo-footer" />
+          <ul>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><i class="fa fa-envelope"></i> Email: info@mensta.com</li>
+            <li><i class="fa fa-phone"></i> Hotline: 0999.999.999</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">HỖ TRỢ KHÁCH HÀNG</div>
+          <ul>
+            <li><a href="#">Hướng dẫn đặt hàng</a></li>
+            <li><a href="#">Hướng dẫn chọn size</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+            <li><a href="#">Chính sách khách VIP</a></li>
+            <li><a href="#">Thanh toán - Giao hàng</a></li>
+            <li><a href="#">Chính sách bảo mật</a></li>
+            <li><a href="#">Chính sách cookie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">VỊ TRÍ CỬA HÀNG</div>
+          <img
+            src="img/map.jpg"
+            alt="Bản đồ cửa hàng"
+            style="
+              width: 100%;
+              max-width: 170px;
+              border-radius: 6px;
+              margin-bottom: 8px;
+            "
+          />
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">KẾT NỐI VỚI MENSTA</div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

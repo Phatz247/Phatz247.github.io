@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng nhập tài khoản</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Đăng nhập tài khoản</h2>
+      <form id="login-form">
+        <label for="login-username">Tên đăng nhập</label>
+        <div class="input-wrapper">
+          <input type="text" id="login-username" required />
+        </div>
+
+        <label for="login-password">Mật khẩu</label>
+        <div class="input-wrapper">
+          <input type="password" id="login-password" required />
+          <span
+            class="toggle-password"
+            onclick="togglePassword('login-password', this)"
+          >
+            <i class="fa-solid fa-eye"></i>
+          </span>
+        </div>
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="remember-me" /> Ghi nhớ tài khoản
+        </label>
+
+        <div class="error" id="error-message"></div>
+
+        <button type="submit" class="btn">Đăng nhập</button>
+
+        <div class="register-link">
+          <a href="register.html">Đăng ký tài khoản</a>
+        </div>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const username = document
+            .getElementById("login-username")
+            .value.trim();
+          const password = document.getElementById("login-password").value;
+
+          const storedUser = JSON.parse(localStorage.getItem("user"));
+
+          if (!storedUser) {
+            alert(
+              "❌ Không có tài khoản nào đã đăng ký. Vui lòng đăng ký trước!"
+            );
+            return;
+          }
+
+          if (
+            username === storedUser.username &&
+            password === storedUser.password
+          ) {
+            localStorage.setItem("loggedInUser", username);
+            window.location.href = "index.html";
+          } else {
+            alert("❌ Tên đăng nhập hoặc mật khẩu không đúng!");
+          }
+        });
+    </script>
+  </body>
+</html>

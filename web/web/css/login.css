@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  height: 100vh;
+  margin: 0;
+  display: block;
+  text-align: center;
+
+  .login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    position: relative;
+    text-align: left;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .input-wrapper {
+    position: relative;
+    margin-bottom: 18px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  .checkbox-label {
+    text-align: left;
+    width: 100%;
+    display: block;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 12px;
+  }
+
+  .btn:hover {
+    background-color: #357ab8;
+  }
+
+  .register-link {
+    text-align: center;
+  }
+
+  .register-link a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+
+  .error {
+    color: red;
+    font-size: 13px;
+    margin-bottom: 12px;
+    display: none;
+  }
+}

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh mục sản phẩm - MENSTA</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/product.css" />
+    <script src="script.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="topbar-container">
+        <div class="topbar-left">
+          <a href="#" class="topbar-link"
+            ><i class="fas fa-phone-alt"></i> Hotline: 0999.999.999</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.jpg" alt="Shoppe Logo" /></a>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="header-icons">
+        <a href="#" class="header-icon-item">
+          <i class="fas fa-user"></i>
+          <span>Tài khoản</span>
+        </a>
+        <a href="shoppingcart.html" class="header-icon-item">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Giỏ hàng</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-nav-bar">
+      <div class="main-nav-container">
+        <ul class="main-nav-list">
+          <li><a href="index.html">TRANG CHỦ</a></li>
+          <li><a href="introduce.html">GIỚI THIỆU</a></li>
+          <li class="dropdown">
+            <a href="menshirt.html">ÁO NAM <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="shirt.html">Áo sơ mi</a></li>
+              <li><a href="polo.html">Áo Polo</a></li>
+              <li><a href="t_shirt.html">Áo thun</a></li>
+              <li><a href="coat.html">Áo khoác</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="menpants.html">QUẦN NAM <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="jean.html">Quần jeans</a></li>
+              <li><a href="trousers.html">Quần tây</a></li>
+              <li><a href="kakipants.html">Quần kaki</a></li>
+              <li><a href="short.html">Quần short</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="accessory.html">PHỤ KIỆN <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="wallet.html">Ví da</a></li>
+              <li><a href="belt.html">Thắt lưng</a></li>
+              <li><a href="tie.html">Cà vạt và nơ</a></li>
+              <li><a href="hat.html">Mũ nón</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <a href="category.html">Danh mục</a>
+        <span>/</span>
+        <span>Ví Da</span>
+      </div>
+
+      <h1 class="page-title">PHỤ KIỆN</h1>
+
+      <div class="main-flex">
+     
+
+          <div class="product-grid-quan">
+           <!-- Product 33: Ví Da Nam Gập Đôi WALLET101 -->
+<div class="product-card" onclick="goToDetail(
+  'Ví Da Nam Gập Đôi WALLET101 Màu Đen',
+  'img/wallet1.jpg',
+  '320000',
+  [
+    {image: 'img/wallet1.jpg', name: 'Đen', price: 320000, title: 'Ví Da Nam Gập Đôi WALLET101 Màu Đen'},
+    {image: 'img/wallet1_thumb1.jpg', name: 'Nâu', price: 320000, title: 'Ví Da Nam Gập Đôi WALLET101 Màu Nâu'}
+  ]
+)" style="cursor: pointer">
+  <img src="img/wallet1.jpg" alt="Ví Da Nam Gập Đôi" />
+  <div class="product-title">Ví Da Nam Gập Đôi WALLET101</div>
+  <div class="price"><span class="new-price">320.000 ₫</span></div>
+</div>
+
+<!-- Product 34: Ví Da Nam Dáng Dài WALLET102 -->
+<div class="product-card" onclick="goToDetail(
+  'Ví Da Nam Dáng Dài WALLET102 Màu Đen',
+  'img/wallet2.jpg',
+  '350000',
+  [
+    {image: 'img/wallet2.jpg', name: 'Đen', price: 350000, title: 'Ví Da Nam Dáng Dài WALLET102 Màu Đen'}
+  ]
+)" style="cursor: pointer">
+  <img src="img/wallet2.jpg" alt="Ví Da Nam Dáng Dài WALLET102 Màu Đen" />
+  <div class="product-title">Ví Da Nam Dáng Dài WALLET102 Màu Đen</div>
+  <div class="price"><span class="new-price">350.000 ₫</span></div>
+</div>
+
+<!-- Product 35: Ví Da Saffiano Có khóa Dáng Ngang BV050 -->
+<div class="product-card" onclick="goToDetail(
+  'Ví Da Saffiano Có khóa Dáng Ngang BV050 Màu Xanh Đen',
+  'img/wallet3.jpg',
+  '290000',
+  [
+    {image: 'img/wallet3.jpg', name: 'Xanh Đen', price: 290000, title: 'Ví Da Saffiano Có khóa Dáng Ngang BV050 Màu Xanh Đen'},
+    {image: 'img/wallet3_thumb1.jpg', name: 'Đen', price: 290000, title: 'Ví Da Saffiano Có khóa Dáng Ngang BV050 Màu Đen'}
+  ]
+)" style="cursor: pointer">
+  <img src="img/wallet3.jpg" alt="Ví Da Saffiano Có khóa Dáng Ngang" />
+  <div class="product-title">Ví Da Saffiano Có khóa Dáng Ngang BV050</div>
+  <div class="price"><span class="new-price">290.000 ₫</span></div>
+</div>
+
+<!-- Product 36: Ví Da Saffiano Phối Sọc BV048 -->
+<div class="product-card" onclick="goToDetail(
+  'Ví Da Saffiano Phối Sọc BV048 Màu Đen Sọc',
+  'img/wallet4.jpg',
+  '370000',
+  [
+    {image: 'img/wallet4.jpg', name: 'Đen Sọc', price: 370000, title: 'Ví Da Saffiano Phối Sọc BV048 Màu Đen Sọc'},
+    {image: 'img/wallet4_thumb1.jpg', name: 'Xanh Sọc', price: 370000, title: 'Ví Da Saffiano Phối Sọc BV048 Màu Xanh Sọc'}
+  ]
+)" style="cursor: pointer">
+  <img src="img/wallet4.jpg" alt="Ví Da Saffiano Phối Sọc" />
+  <div class="product-title">Ví Da Saffiano Phối Sọc BV048</div>
+  <div class="price"><span class="new-price">370.000 ₫</span></div>
+</div>
+<!-- Product 37: Thắt lưng khóa tự động TL184 -->
+<div class="product-card" onclick="goToDetail(
+  'Thắt lưng khóa tự động TL184 Màu Đen',
+  'img/belt1.jpg',
+  '210000',
+  [
+    {image: 'img/belt1.jpg', name: 'Đen', price: 210000, title: 'Thắt lưng khóa tự động TL184 Màu Đen'}
+  ]
+)" style="cursor: pointer">
+  <img src="img/belt1.jpg" alt="Thắt lưng khóa tự động" />
+  <div class="product-title">Thắt lưng khóa tự động TL184</div>
+  <div class="price"><span class="new-price">210.000 ₫</span></div>
+</div>
+
+<!-- Product 38: Thắt lưng đầu kim TL182 -->
+<div class="product-card" onclick="goToDetail(
+  'Thắt lưng đầu kim TL182 Màu Đen',
+  'img/belt2.jpg',
+  '220000',
+  [
+    {image: 'img/belt2.jpg', name: 'Đen', price: 220000, title: 'Thắt lưng đầu kim TL182 Màu Đen'}
+  ]
+)" style="cursor: pointer">
+  <img src="img/belt2.jpg" alt="Thắt lưng đầu kim" />
+  <div class="product-title">Thắt lưng đầu kim TL182</div>
+  <div class="price"><span class="new-price">220.000 ₫</span></div>
+</div>
+
+<!-- Product 39: Thắt lưng đầu kim TL181 -->
+<div class="product-card" onclick="goToDetail(
+  'Thắt lưng đầu kim TL181 Màu Đen',
+  'img/belt3.jpg',
+  '180000',
+  [
+    {image: 'img/belt3.jpg', name: 'Đen', price: 180000, title: 'Thắt lưng đầu kim TL181 Màu Đen'}
+  ]
+)" style="cursor: pointer">
+  <img src="img/belt3.jpg" alt="Thắt lưng đầu kim" />
+  <div class="product-title">Thắt lưng đầu kim TL181</div>
+  <div class="price"><span class="new-price">180.000 ₫</span></div>
+</div>
+
+<!-- Product 40: Thắt lưng khóa tự động TL180 -->
+<div class="product-card" onclick="goToDetail(
+  'Thắt lưng khóa tự động TL180 Màu Đen',
+  'img/belt4.jpg',
+  '230000',
+  [
+    {image: 'img/belt4.jpg', name: 'Đen', price: 230000, title: 'Thắt lưng khóa tự động TL180 Màu Đen'}
+  ]
+)" style="cursor: pointer">
+  <img src="img/belt4.jpg" alt="Thắt lưng khóa tự động" />
+  <div class="product-title">Thắt lưng khóa tự động TL180</div>
+  <div class="price"><span class="new-price">230.000 ₫</span></div>
+</div>
+  <!-- Product 41 -->
+  <div class="product-card" onclick="goToDetail('Cà Vạt Lụa TIE101 Màu Xanh', 'img/tie1.jpg', '120000', [{image: 'img/tie1.jpg', name: 'Xanh', price: 120000, title: 'Cà Vạt Lụa TIE101 Màu Xanh'}, {image: 'img/tie1_thumb1.jpg', name: 'Xanh', price: 120000, title: 'Cà Vạt Lụa TIE101 Màu Xanh'}])">
+    <img src="img/tie1.jpg" alt="Cà Vạt Lụa" />
+    <div class="product-title">Cà Vạt Lụa TIE101</div>
+    <div class="price"><span class="new-price">120.000 ₫</span></div>
+  </div>
+
+  <!-- Product 42 -->
+  <div class="product-card" onclick="goToDetail('Cà Vạt Lụa TIE102 Mùa Xanh Than', 'img/tie2.jpg', '125000', [{image: 'img/tie2.jpg', name: 'Xanh Than', price: 125000, title: 'Cà Vạt Lụa TIE102 Màu Xanh Than'}, {image: 'img/tie2_thumb1.jpg', name: 'Xanh Than', price: 125000, title: 'Cà Vạt Lụa TIE102 Màu Xanh Than'}])">
+    <img src="img/tie2.jpg" alt="Cà Vạt Lụa" />
+    <div class="product-title">Cà Vạt Lụa TIE102</div>
+    <div class="price"><span class="new-price">125.000 ₫</span></div>
+  </div>
+
+  <!-- Product 43 -->
+  <div class="product-card" onclick="goToDetail('Nơ Nam Lụa BOWTIE101 Mùa Đen', 'img/bowtie1.jpg', '90000', [{image: 'img/bowtie1.jpg', name: 'Đen', price: 90000, title: 'Nơ Nam Lụa BOWTIE101 Màu Đen'}, {image: 'img/bowtie1_thumb1.jpg', name: 'Đen', price: 90000, title: 'Nơ Nam Lụa BOWTIE101 Màu Đen'}])">
+    <img src="img/bowtie1.jpg" alt="Nơ Nam Lụa" />
+    <div class="product-title">Nơ Nam Lụa BOWTIE101</div>
+    <div class="price"><span class="new-price">90.000 ₫</span></div>
+  </div>
+
+  <!-- Product 44 -->
+  <div class="product-card" onclick="goToDetail('Nơ Nam Lụa BOWTIE102 Màu Đen', 'img/bowtie2.jpg', '95000', [{image: 'img/bowtie2.jpg', name: 'Đen', price: 95000, title: 'Nơ Nam Lụa BOWTIE102 Màu Đen'}, {image: 'img/bow2_thumb1.jpg', name: 'Đen', price: 95000, title: 'Nơ Nam Lụa BOWTIE102 Màu Đen'}])">
+    <img src="img/bowtie2.jpg" alt="Nơ Nam Lụa" />
+    <div class="product-title">Nơ Nam Lụa BOWTIE102</div>
+    <div class="price"><span class="new-price">95.000 ₫</span></div>
+  </div>
+   <!-- Product 45 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+        'Mũ Lưỡi Trai HAT101 Màu Trắng',
+        'img/hat1.jpg',
+        '110000',
+        [
+          {image: 'img/hat1.jpg', name: 'Trắng', price: 110000, title: 'Mũ Lưỡi Trai HAT101 Màu Trắng'},
+          {image: 'img/hat1_thumb1.jpg', name: 'Xanh', price: 110000, title: 'Mũ Lưỡi Trai HAT101 Màu Xanh'},
+          {image: 'img/hat1_thumb2.jpg', name: 'Đen', price: 110000, title: 'Mũ Lưỡi Trai HAT101 Màu Đen'}
+        ]
+      )"
+              style="cursor: pointer"
+            >
+              <img src="img/hat1.jpg" alt="Mũ Lưỡi Trai HAT101" />
+              <div class="product-title">Mũ Lưỡi Trai HAT101</div>
+              <div class="price"><span class="new-price">110.000 ₫</span></div>
+            </div>
+
+            <!-- Product 46 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+        'Mũ Bucket HAT102 Màu Trắng',
+        'img/hat2.jpg',
+        '130000',
+        [
+          {image: 'img/hat2.jpg', name: 'Trắng', price: 130000, title: 'Mũ Bucket HAT102 Màu Trắng'},
+          {image: 'img/hat2_thumb1.jpg', name: 'Xanh', price: 130000, title: 'Mũ Bucket HAT102 Màu Xanh'}
+        ]
+      )"
+              style="cursor: pointer"
+            >
+              <img src="img/hat2.jpg" alt="Mũ Bucket HAT102" />
+              <div class="product-title">Mũ Bucket HAT102</div>
+              <div class="price"><span class="new-price">130.000 ₫</span></div>
+            </div>
+
+            <!-- Product 47 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+        'Mũ Lưỡi Trai HAT103 Màu Đen',
+        'img/hat3.jpg',
+        '115000',
+        [
+          {image: 'img/hat3.jpg', name: 'Đen', price: 115000, title: 'Mũ Lưỡi Trai HAT103 Màu Đen'},
+          {image: 'img/hat3_thumb1.jpg', name: 'Xanh Da Trời', price: 115000, title: 'Mũ Lưỡi Trai HAT103 Màu Xanh Da Trời'}
+        ]
+      )"
+              style="cursor: pointer"
+            >
+              <img src="img/hat3.jpg" alt="Mũ Lưỡi Trai HAT103" />
+              <div class="product-title">Mũ Lưỡi Trai HAT103</div>
+              <div class="price"><span class="new-price">115.000 ₫</span></div>
+            </div>
+
+            <!-- Product 48 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+        'Mũ Bucket HAT104 Màu Đen',
+        'img/hat4.jpg',
+        '135000',
+        [
+          {image: 'img/hat4.jpg', name: 'Đen', price: 135000, title: 'Mũ Bucket HAT104 Màu Đen'}
+        ]
+      )"
+              style="cursor: pointer"
+            >
+              <img src="img/hat4.jpg" alt="Mũ Bucket HAT104" />
+              <div class="product-title">Mũ Bucket HAT104</div>
+              <div class="price"><span class="new-price">135.000 ₫</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+ <!-- Footer -->
+    <footer class="footer-full-black">
+      <div class="footer-container">
+        <div class="footer-col">
+          <img src="img/logo1.jpg" alt="MENSTA" class="logo-footer" />
+          <ul>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+            <li><a href="#">Tin tức</a></li>
+            <li><i class="fa fa-envelope"></i> Email: info@mensta.com</li>
+            <li><i class="fa fa-phone"></i> Hotline: 0999.999.999</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">HỖ TRỢ KHÁCH HÀNG</div>
+          <ul>
+            <li><a href="#">Hướng dẫn đặt hàng</a></li>
+            <li><a href="#">Hướng dẫn chọn size</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+            <li><a href="#">Chính sách khách VIP</a></li>
+            <li><a href="#">Thanh toán - Giao hàng</a></li>
+            <li><a href="#">Chính sách bảo mật</a></li>
+            <li><a href="#">Chính sách cookie</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">VỊ TRÍ CỬA HÀNG</div>
+          <img
+            src="img/map.jpg"
+            alt="Bản đồ cửa hàng"
+            style="
+              width: 100%;
+              max-width: 170px;
+              border-radius: 6px;
+              margin-bottom: 8px;
+            "
+          />
+        </div>
+        <div class="footer-col">
+          <div class="footer-title">KẾT NỐI VỚI MENSTA</div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng ký tài khoản</title>
+    <link rel="stylesheet" href="css/register.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Đăng ký tài khoản</h1>
+      <form id="register-form">
+        <div class="form-group">
+          <label for="username"
+            >Tên đăng nhập <span style="color: red">*</span></label
+          >
+          <input type="text" id="username" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password"
+            >Mật khẩu <span style="color: red">*</span></label
+          >
+          <input type="password" id="password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password"
+            >Xác nhận mật khẩu <span style="color: red">*</span></label
+          >
+          <input type="password" id="confirm-password" required />
+        </div>
+
+        <div class="form-group">
+          <label for="fullname">Họ và tên</label>
+          <input type="text" id="fullname" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="gender">Giới tính</label>
+            <select id="gender">
+              <option value="">-- Chọn giới tính --</option>
+              <option value="Nam">Nam</option>
+              <option value="Nữ">Nữ</option>
+              <option value="Khác">Khác</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Ngày sinh</label>
+            <input type="date" id="dob" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Địa chỉ</label>
+          <input type="text" id="address" />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Số điện thoại</label>
+          <input type="text" id="phone" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span style="color: red">*</span></label>
+          <input type="email" id="email" required />
+        </div>
+
+        <div class="checkbox-wrapper">
+          <input type="checkbox" id="agree-terms" />
+          <label for="agree-terms">
+            Tôi đồng ý với điều khoản <span class="required">*</span>
+          </label>
+        </div>
+
+        <div class="submit-btn" id="submit-btn">
+          <button type="submit">Đăng ký tài khoản</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const checkbox = document.getElementById("agree-terms");
+      const submitBtn = document.getElementById("submit-btn");
+
+      checkbox.addEventListener("change", () => {
+        submitBtn.style.display = checkbox.checked ? "block" : "none";
+      });
+
+      // document
+      //   .getElementById("register-form")
+      //   .addEventListener("submit", function (e) {
+      //     e.preventDefault();
+      //     alert("🎉 Đăng ký thành công!");
+      //     // Bạn có thể thêm xử lý lưu vào localStorage tại đây nếu cần
+      //   });
+      document
+        .getElementById("register-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const password = document.getElementById("password").value.trim();
+          const confirmPassword = document
+            .getElementById("confirm-password")
+            .value.trim();
+
+          if (password !== confirmPassword) {
+            alert("❌ Mật khẩu và xác nhận mật khẩu không khớp!");
+            return;
+          }
+
+          if (!document.getElementById("agree-terms").checked) {
+            alert("❗ Bạn phải đồng ý với điều khoản để đăng ký.");
+            return;
+          }
+
+          // Nếu mọi thứ hợp lệ, tiếp tục đăng ký
+          alert("🎉 Đăng ký thành công!");
+          window.location.href = "dangnhap.html";
+          // Thêm xử lý lưu localStorage tại đây nếu cần
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Giỏ hàng của bạn</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .cart-container {
+        max-width: 900px;
+        margin: auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      table th,
+      table td {
+        padding: 12px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+
+      table th {
+        background-color: #f2f2f2;
+      }
+
+      .total {
+        text-align: right;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      .empty {
+        text-align: center;
+        font-size: 18px;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cart-container">
+      <h1>Giỏ hàng của bạn</h1>
+      <div id="cart-content"></div>
+    </div>
+
+    <script>
+      // Lấy dữ liệu từ localStorage
+      const cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const cartContent = document.getElementById("cart-content");
+
+      if (cartData.length === 0) {
+        cartContent.innerHTML = `<p class="empty">Bạn chưa mua sản phẩm nào.</p>`;
+      } else {
+        let total = 0;
+
+        let table = `
+        <table>
+          <thead>
+            <tr>
+              <th>Tên sản phẩm</th>
+              <th>Giá</th>
+              <th>Số lượng</th>
+              <th>Thành tiền</th>
+            </tr>
+          </thead>
+          <tbody>
+      `;
+
+        cartData.forEach((item) => {
+          const itemTotal = item.price * item.quantity;
+          total += itemTotal;
+
+          table += `
+          <tr>
+            <td>${item.name}</td>
+            <td>${item.price.toLocaleString()} đ</td>
+            <td>${item.quantity}</td>
+            <td>${itemTotal.toLocaleString()} đ</td>
+          </tr>
+        `;
+        });
+
+        table += `
+          </tbody>
+        </table>
+        <p class="total">Tổng cộng: ${total.toLocaleString()} đ</p>
+      `;
+
+        cartContent.innerHTML = table;
+      }
+    </script>
+  </body>
+</html>
