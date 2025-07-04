@@ -1,3 +1,25 @@
+* {
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+.fa,
+.fas,
+.far,
+.fab,
+.fal,
+.fad,
+.fa-solid,
+.fa-regular,
+.fa-brands {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900;
+}
+
+.fa-brands {
+  font-family: "Font Awesome 6 Brands" !important;
+  font-weight: 400;
+}
+
 :root {
   --primary-color: #333; /* Đen */
   --secondary-color: #fff; /* Trắng */
