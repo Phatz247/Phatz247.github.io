@@ -15,9 +15,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Thêm font Roboto nếu muốn -->
+    <!-- Modern Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Times New Roman:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -37,28 +37,30 @@
 
     <!-- Main Header -->
     <header class="main-header">
-      <div class="logo">
-        <a href="index.html"><img src="img/logo.jpg" alt="Shoppe Logo" /></a>
-      </div>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html"><img src="img/logo.jpg" alt="Shoppe Logo" /></a>
+        </div>
 
-      <div class="search-container">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Tìm kiếm sản phẩm..."
-        />
-        <button><i class="fas fa-search"></i></button>
-      </div>
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Tìm kiếm sản phẩm..."
+          />
+          <button><i class="fas fa-search"></i></button>
+        </div>
 
-      <div class="header-icons">
-        <a href="" class="header-icon-item">
-          <i class="fas fa-user"></i>
-          <span>Tài khoản</span>
-        </a>
-        <a href="shoppingcart.html" class="header-icon-item">
-          <i class="fas fa-shopping-cart"></i>
-          <span>Giỏ hàng</span>
-        </a>
+        <div class="header-icons">
+          <a href="dangnhap.html" class="header-icon-item">
+            <i class="fas fa-user"></i>
+            <span>Tài khoản</span>
+          </a>
+          <a href="shoppingcart.html" class="header-icon-item">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Giỏ hàng</span>
+          </a>
+        </div>
       </div>
     </header>
 
@@ -140,46 +142,59 @@
 
       <!-- Hot Products -->
       <section class="products-section">
-        <h2 class="section-title">THỜI TRANG HOT NHẤT</h2>
-        <div class="product-grid">
-          <!-- Product 1 -->
-          <div
-            class="product-card"
-            id="product9"
-            onclick="goToDetail(
-  'Áo Thun In Chữ Wave To The Beach TS101 Màu Rêu',
-  'img/tshirt1.jpg',
-  '185000',
-  [
-    {
-      image: 'img/tshirt1.jpg',
-      name: 'Rêu',
-      price: 185000,
-      title: 'Áo Thun In Chữ Wave To The Beach TS101 Màu Rêu'
-    },
-    {
-      image: 'img/tshirt1_thumb1.jpg',
-      name: 'Trắng',
-      price: 185000,
-      title: 'Áo Thun In Chữ Wave To The Beach TS101 Màu Trắng'
-    }
-  ], 'ao'
-)"
-          >
-            <div class="badge new">Hot</div>
-
-            <img
-              src="img/tshirt1.jpg"
-              alt="Áo Thun In Chữ Wave To The Beach"
-              id="main-img-9"
-            />
-            <div class="product-title" id="product-title-9">
-              Áo Thun In Chữ Wave To The Beach TS101 Màu Rêu
+        <div class="container">
+          <h2 class="section-title">THỜI TRANG HOT NHẤT</h2>
+          <div class="product-grid">
+            <!-- Product 1 -->
+            <div
+              class="product-card"
+              id="product9"
+              onclick="goToDetail(
+    'Áo Thun In Chữ Wave To The Beach TS101 Màu Rêu',
+    'img/tshirt1.jpg',
+    '185000',
+    [
+      {
+        image: 'img/tshirt1.jpg',
+        name: 'Rêu',
+        price: 185000,
+        title: 'Áo Thun In Chữ Wave To The Beach TS101 Màu Rêu'
+      },
+      {
+        image: 'img/tshirt1_thumb1.jpg',
+        name: 'Trắng',
+        price: 185000,
+        title: 'Áo Thun In Chữ Wave To The Beach TS101 Màu Trắng'
+      }
+    ], 'ao'
+  )"
+            >
+              <div class="badge hot">Hot</div>
+              <div class="image-container">
+                <img
+                  src="img/tshirt1.jpg"
+                  alt="Áo Thun In Chữ Wave To The Beach"
+                  id="main-img-9"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-title" id="product-title-9">
+                  Áo Thun In Chữ Wave To The Beach TS101 Màu Rêu
+                </div>
+                <div class="price" id="product-price-9">
+                  <span class="new-price">185.000 ₫</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                    Thêm giỏ hàng
+                  </button>
+                  <button class="btn btn-secondary">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="price" id="product-price-9">
-              <span class="new-price">185.000 ₫</span>
-            </div>
-          </div>
 
           <!-- Product 2 -->
           <div
@@ -260,42 +275,55 @@
             <div class="price" id="product-price-20">
               <span class="new-price">365.000 ₫</span>
             </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- New Products Section -->
       <section class="products-section">
-        <h2 class="section-title">THỜI TRANG MỚI NHẤT</h2>
-        <div class="product-grid">
-          <!-- Đổi từ product-grid-4 thành product-grid để dùng chung style -->
-          <!-- Product 1 -->
-          <div
-            class="product-card"
-            onclick="goToDetail(
-  'Quần Jean Wash Bạc Màu JEAN102 Xanh Biển Đậm',
-  'img/jean2.jpg',
-  '370000',
-  [
-    {image: 'img/jean2.jpg', name: 'Xanh Biển Đậm', price: 370000, title: 'Quần Jean Wash Bạc Màu JEAN102 Xanh Biển Đậm'},
-    {image: 'img/jean2_thumb1.jpg', name: 'Xanh Đen', price: 370000, title: 'Quần Jean Wash Bạc Màu JEAN102 Xanh Đen'}
-  ], 'quan'
-)"
-          >
-            <div class="badge new">New</div>
-
-            <img
-              src="img/jean2.jpg"
-              alt="Quần Jean Wash Bạc Màu"
-              id="main-img-18"
-            />
-            <div class="product-title" id="product-title-18">
-              Quần Jean Wash Bạc Màu JEAN102 Màu Xanh Biển Đậm
+        <div class="container">
+          <h2 class="section-title">THỜI TRANG MỚI NHẤT</h2>
+          <div class="product-grid">
+            <!-- Product 1 -->
+            <div
+              class="product-card"
+              onclick="goToDetail(
+    'Quần Jean Wash Bạc Màu JEAN102 Xanh Biển Đậm',
+    'img/jean2.jpg',
+    '370000',
+    [
+      {image: 'img/jean2.jpg', name: 'Xanh Biển Đậm', price: 370000, title: 'Quần Jean Wash Bạc Màu JEAN102 Xanh Biển Đậm'},
+      {image: 'img/jean2_thumb1.jpg', name: 'Xanh Đen', price: 370000, title: 'Quần Jean Wash Bạc Màu JEAN102 Xanh Đen'}
+    ], 'quan'
+  )"
+            >
+              <div class="badge new">New</div>
+              <div class="image-container">
+                <img
+                  src="img/jean2.jpg"
+                  alt="Quần Jean Wash Bạc Màu"
+                  id="main-img-18"
+                />
+              </div>
+              <div class="product-content">
+                <div class="product-title" id="product-title-18">
+                  Quần Jean Wash Bạc Màu JEAN102 Màu Xanh Biển Đậm
+                </div>
+                <div class="price" id="product-price-18">
+                  <span class="new-price">370.000 ₫</span>
+                </div>
+                <div class="product-actions">
+                  <button class="btn btn-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                    Thêm giỏ hàng
+                  </button>
+                  <button class="btn btn-secondary">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="price" id="product-price-18">
-              <span class="new-price">370.000 ₫</span>
-            </div>
-          </div>
 
           <!-- Product 2 -->
           <div
@@ -498,13 +526,15 @@
             <div class="price" id="product-price-4">
               <span class="new-price">405.000 ₫</span>
             </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <!-- Footer -->
     <footer class="footer-full-black">
-      <div class="footer-container">
+      <div class="container">
+        <div class="footer-container">
         <div class="footer-col">
           <img src="img/logo1.jpg" alt="MENSTA" class="logo-footer" />
           <ul>
@@ -549,6 +579,7 @@
             <a href="#"><i class="fab fa-youtube"></i></a>
             <a href="#"><i class="fab fa-tiktok"></i></a>
           </div>
+        </div>
         </div>
       </div>
     </footer>
