@@ -2,39 +2,146 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <title>Trang Mua Hàng</title>
-    <link
-      rel="stylesheet"
-      href="css/pay.css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh Toán - 4MenShop</title>
+    <link rel="stylesheet" href="css/pay.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <h1>THANH TOÁN</h1>
-    <div class="container">
-      <div class="product-image">
-        <img id="product-image" src="" alt="Sản phẩm" />
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="breadcrumb">
+          <span><i class="fas fa-home"></i> Trang chủ</span>
+          <span class="separator">></span>
+          <span>Thanh toán</span>
+        </div>
       </div>
-      <div class="product-details">
-        <div class="product-title" id="product-title"></div>
-        <div class="product-price" id="product-price"></div>
+    </header>
 
-        <label>Chọn màu:</label>
-        <div id="color-options"></div>
-
-        <div id="size-section" style="display: none">
-          <label for="size">Chọn size:</label>
-          <select id="size"></select>
+    <!-- Main Content -->
+    <div class="main-container">
+      <div class="product-section">
+        <!-- Product Images -->
+        <div class="product-images">
+          <div class="main-image">
+            <img id="product-image" src="" alt="Sản phẩm" />
+            <div class="image-zoom-indicator">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div class="thumbnail-images" id="thumbnail-container">
+            <!-- Thumbnails will be populated by JavaScript -->
+          </div>
         </div>
 
-        <label for="quantity">Số lượng:</label>
-        <input type="number" id="quantity" value="1" min="1" />
+        <!-- Product Information -->
+        <div class="product-info">
+          <div class="product-header">
+            <h1 class="product-title" id="product-title"></h1>
+            <div class="product-rating">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-text">(5.0) | 127 đánh giá</span>
+            </div>
+            <div class="product-code">
+              <span>Mã sản phẩm: <strong id="product-code">SP001</strong></span>
+            </div>
+          </div>
 
-        <div class="total-price" id="total"></div>
+          <div class="price-section">
+            <div class="current-price" id="product-price"></div>
+            <div class="original-price" id="original-price" style="display: none;"></div>
+            <div class="discount-badge" id="discount-badge" style="display: none;">
+              <span>-15%</span>
+            </div>
+          </div>
 
-        <div class="button-group">
-          <button class="order-button" onclick="placeOrder()">Đặt hàng</button>
-          <button class="cancel-button" onclick="history.back()">Hủy</button>
+          <div class="product-options">
+            <!-- Color Selection -->
+            <div class="option-group">
+              <label class="option-label">Màu sắc:</label>
+              <div class="color-options" id="color-options">
+                <!-- Color options will be populated by JavaScript -->
+              </div>
+            </div>
+
+            <!-- Size Selection -->
+            <div class="option-group" id="size-section" style="display: none">
+              <label class="option-label" for="size">Kích thước:</label>
+              <div class="size-options">
+                <select id="size" class="size-select">
+                  <option value="">Chọn kích thước</option>
+                </select>
+              </div>
+              <div class="size-guide">
+                <a href="#" class="size-guide-link">
+                  <i class="fas fa-ruler"></i> Hướng dẫn chọn size
+                </a>
+              </div>
+            </div>
+
+            <!-- Quantity Selection -->
+            <div class="option-group">
+              <label class="option-label" for="quantity">Số lượng:</label>
+              <div class="quantity-controls">
+                <button type="button" class="qty-btn" id="decrease-qty">-</button>
+                <input type="number" id="quantity" value="1" min="1" max="99" readonly />
+                <button type="button" class="qty-btn" id="increase-qty">+</button>
+              </div>
+              <div class="stock-info">
+                <i class="fas fa-check-circle"></i>
+                <span>Còn hàng (50+ sản phẩm)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Total Price -->
+          <div class="total-section">
+            <div class="total-price" id="total"></div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="action-buttons">
+            <button class="btn btn-primary order-button" onclick="placeOrder()">
+              <i class="fas fa-shopping-cart"></i>
+              Thêm vào giỏ hàng
+            </button>
+            <button class="btn btn-secondary buy-now-button" onclick="buyNow()">
+              <i class="fas fa-bolt"></i>
+              Mua ngay
+            </button>
+            <button class="btn btn-outline cancel-button" onclick="history.back()">
+              <i class="fas fa-arrow-left"></i>
+              Quay lại
+            </button>
+          </div>
+
+          <!-- Additional Info -->
+          <div class="product-benefits">
+            <div class="benefit-item">
+              <i class="fas fa-truck"></i>
+              <span>Miễn phí vận chuyển cho đơn hàng từ 500.000đ</span>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-undo"></i>
+              <span>Đổi trả miễn phí trong 30 ngày</span>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Bảo hành chính hãng</span>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-headset"></i>
+              <span>Hỗ trợ 24/7</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -42,20 +149,29 @@
     <script>
       const product = JSON.parse(localStorage.getItem("selectedProduct"));
       const defaultImage = product?.image;
-      let currentPrice = parseInt(product.price); // Đảm bảo giá dạng số
+      let currentPrice = parseInt(product.price);
 
       function updateTotal() {
         const quantity = parseInt(document.getElementById("quantity").value);
         const total = currentPrice * quantity;
-        document.getElementById("total").innerText =
-          "Tổng tiền: " + total.toLocaleString() + " ₫";
+        document.getElementById("total").innerHTML = 
+          `<span class="total-label">Tổng cộng:</span><span class="total-amount">${total.toLocaleString()} ₫</span>`;
+      }
+
+      function updateQuantity(change) {
+        const quantityInput = document.getElementById("quantity");
+        let currentQty = parseInt(quantityInput.value);
+        let newQty = currentQty + change;
+        
+        if (newQty >= 1 && newQty <= 99) {
+          quantityInput.value = newQty;
+          updateTotal();
+        }
       }
 
       function placeOrder() {
         const sizeSelect = document.getElementById("size");
-        const size =
-          sizeSelect && sizeSelect.value ? sizeSelect.value : "Không chọn";
-
+        const size = sizeSelect && sizeSelect.value ? sizeSelect.value : "Không chọn";
         const quantity = parseInt(document.getElementById("quantity").value);
         const name = document.getElementById("product-title").innerText.trim();
         const price = currentPrice;
@@ -69,13 +185,9 @@
           image: image,
         };
 
-        // Lấy giỏ hàng hiện tại
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-        // Tìm sản phẩm trùng tên và size
         const existingIndex = cart.findIndex(
-          (item) =>
-            item.name === productToSave.name && item.size === productToSave.size
+          (item) => item.name === productToSave.name && item.size === productToSave.size
         );
 
         if (existingIndex !== -1) {
@@ -86,58 +198,68 @@
 
         localStorage.setItem("cart", JSON.stringify(cart));
 
-        const formattedPrice =
-          (price * quantity).toLocaleString("vi-VN") + " ₫";
+        const formattedPrice = (price * quantity).toLocaleString("vi-VN") + " ₫";
 
         alert(
-          `🛒 Đặt hàng thành công!\n\n` +
-            `🧾 Sản phẩm: ${name}\n` +
-            `📦 Số lượng: ${quantity}\n` +
-            `📐 Size: ${size}\n` +
-            `💰 Tổng tiền: ${formattedPrice}`
+          `🛒 Đã thêm vào giỏ hàng!\n\n` +
+          `🧾 Sản phẩm: ${name}\n` +
+          `📦 Số lượng: ${quantity}\n` +
+          `📐 Size: ${size}\n` +
+          `💰 Tổng tiền: ${formattedPrice}`
         );
+      }
 
-        history.back(); // hoặc chuyển hướng: window.location.href = "trang-gio-hang.html";
+      function buyNow() {
+        placeOrder();
+        window.location.href = "checkout.html";
       }
 
       if (product) {
         document.getElementById("product-title").innerText = product.title;
         document.getElementById("product-image").src = product.image;
-        document.getElementById("product-price").innerText =
-          parseInt(product.price).toLocaleString() + " ₫";
+        document.getElementById("product-price").innerText = parseInt(product.price).toLocaleString() + " ₫";
         updateTotal();
-
-        showSizeOptions(product.type); // <--- gọi ở đây
+        showSizeOptions(product.type);
       }
 
-      document
-        .getElementById("quantity")
-        .addEventListener("input", updateTotal);
+      // Event listeners
+      document.getElementById("increase-qty").addEventListener("click", () => updateQuantity(1));
+      document.getElementById("decrease-qty").addEventListener("click", () => updateQuantity(-1));
+      document.getElementById("quantity").addEventListener("input", updateTotal);
 
+      // Color options
       const colorContainer = document.getElementById("color-options");
       if (product.colors && Array.isArray(product.colors)) {
-        product.colors.forEach((color) => {
+        product.colors.forEach((color, index) => {
+          const colorOption = document.createElement("div");
+          colorOption.className = "color-option";
+          if (index === 0) colorOption.classList.add("selected");
+          
           const img = document.createElement("img");
           img.src = color.image;
           img.alt = color.name;
           img.title = color.name;
+          
+          const colorName = document.createElement("span");
+          colorName.className = "color-name";
+          colorName.textContent = color.name;
+          
+          colorOption.appendChild(img);
+          colorOption.appendChild(colorName);
 
-          img.onclick = () => {
+          colorOption.onclick = () => {
             document.getElementById("product-image").src = color.image;
             document.getElementById("product-title").innerText = color.title;
-            document.getElementById("product-price").innerText =
-              parseInt(color.price).toLocaleString() + " ₫";
+            document.getElementById("product-price").innerText = parseInt(color.price).toLocaleString() + " ₫";
 
             currentPrice = parseInt(color.price);
             updateTotal();
 
-            document
-              .querySelectorAll("#color-options img")
-              .forEach((el) => el.classList.remove("selected"));
-            img.classList.add("selected");
+            document.querySelectorAll(".color-option").forEach((el) => el.classList.remove("selected"));
+            colorOption.classList.add("selected");
           };
 
-          colorContainer.appendChild(img);
+          colorContainer.appendChild(colorOption);
         });
       }
 
@@ -150,7 +272,7 @@
           return;
         }
 
-        sizeSelect.innerHTML = ""; // clear các lựa chọn cũ
+        sizeSelect.innerHTML = '<option value="">Chọn kích thước</option>';
 
         if (type === "ao") {
           ["S", "M", "L", "XL"].forEach((size) => {
@@ -169,7 +291,6 @@
           });
           sizeSection.style.display = "block";
         } else {
-          // phukien thì không hiển thị size
           sizeSection.style.display = "none";
         }
       }
