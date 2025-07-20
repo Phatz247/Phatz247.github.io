@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Áo Sơ Mi Nam Cao Cấp - Màu Đen - MENSTA</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/product-detail.css" />
+    <script src="script.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="topbar-container">
+        <div class="topbar-left">
+          <a href="#" class="topbar-link"
+            ><i class="fas fa-phone-alt"></i> Hotline: 0999.999.999</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.jpg" alt="MENSTA Logo" /></a>
+      </div>
+
+      <div class="search-container">
+        <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="header-icons">
+        <a href="#" class="header-icon-item">
+          <i class="fas fa-user"></i>
+          <span>Tài khoản</span>
+        </a>
+        <a href="shoppingcart.html" class="header-icon-item">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Giỏ hàng</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-nav-bar">
+      <div class="main-nav-container">
+        <ul class="main-nav-list">
+          <li><a href="index.html">TRANG CHỦ</a></li>
+          <li><a href="introduce.html">GIỚI THIỆU</a></li>
+          <li class="dropdown">
+            <a href="menshirt.html">ÁO NAM <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="shirt.html">Áo sơ mi</a></li>
+              <li><a href="polo.html">Áo Polo</a></li>
+              <li><a href="t_shirt.html">Áo thun</a></li>
+              <li><a href="coat.html">Áo khoác</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="menpants.html">QUẦN NAM <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="jean.html">Quần jeans</a></li>
+              <li><a href="trousers.html">Quần tây</a></li>
+              <li><a href="kakipants.html">Quần kaki</a></li>
+              <li><a href="short.html">Quần short</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="accessory.html">PHỤ KIỆN <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="wallet.html">Ví da</a></li>
+              <li><a href="belt.html">Thắt lưng</a></li>
+              <li><a href="tie.html">Cà vạt và nơ</a></li>
+              <li><a href="hat.html">Mũ nón</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span>/</span>
+        <a href="menshirt.html">Áo nam</a>
+        <span>/</span>
+        <a href="shirt.html">Áo sơ mi</a>
+        <span>/</span>
+        <span>Áo Sơ Mi Nam Cao Cấp</span>
+      </div>
+
+      <!-- Product Detail Container -->
+      <div class="product-detail-container">
+        <!-- Product Images Section -->
+        <div class="product-images">
+          <div class="main-image-container">
+            <div class="zoom-icon">
+              <i class="fas fa-search-plus"></i>
+            </div>
+            <img id="mainImage" src="img/shirt1.jpg" alt="Áo Sơ Mi Nam Cao Cấp" />
+          </div>
+          
+          <div class="thumbnail-images">
+            <img class="thumbnail active" src="img/shirt1.jpg" alt="Thumbnail 1" onclick="changeMainImage(this)" />
+            <img class="thumbnail" src="img/shirt2.jpg" alt="Thumbnail 2" onclick="changeMainImage(this)" />
+            <img class="thumbnail" src="img/shirt1_thumb1.jpg" alt="Thumbnail 3" onclick="changeMainImage(this)" />
+          </div>
+        </div>
+
+        <!-- Product Information Section -->
+        <div class="product-info">
+          <h1 class="product-title">Áo Sơ Mi Nam Cao Cấp - Màu Đen</h1>
+          
+          <!-- Rating -->
+          <div class="product-rating">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <span class="rating-text">(5.0)</span>
+            <span class="review-count">| 127 đánh giá</span>
+          </div>
+
+          <!-- Product Code -->
+          <div class="product-code">
+            <span>Mã sản phẩm: <strong>SM001</strong></span>
+          </div>
+
+          <!-- Price -->
+          <div class="product-price">
+            <span class="current-price">649.000 đ</span>
+            <span class="discount-badge">-15%</span>
+          </div>
+
+          <!-- Color Selection -->
+          <div class="product-options">
+            <label class="option-label">Màu sắc:</label>
+            <div class="color-options">
+              <div class="color-option">
+                <img src="img/shirt1.jpg" alt="Trắng" />
+                <span>Trắng</span>
+              </div>
+              <div class="color-option">
+                <img src="img/shirt2.jpg" alt="Xanh Navy" />
+                <span>Xanh Navy</span>
+              </div>
+              <div class="color-option selected">
+                <img src="img/shirt1_thumb1.jpg" alt="Đen" />
+                <span>Đen</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Size Selection -->
+          <div class="product-options">
+            <label class="option-label">Kích thước:</label>
+            <div class="size-options">
+              <select class="size-select">
+                <option value="">Chọn kích thước</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+              </select>
+              <a href="#" class="size-guide">
+                <i class="fas fa-ruler"></i> Hướng dẫn chọn size
+              </a>
+            </div>
+          </div>
+
+          <!-- Quantity -->
+          <div class="product-options">
+            <label class="option-label">Số lượng:</label>
+            <div class="quantity-section">
+              <div class="quantity-controls">
+                <button class="qty-btn" onclick="decreaseQuantity()">-</button>
+                <input type="number" id="quantity" value="1" min="1" max="50" />
+                <button class="qty-btn" onclick="increaseQuantity()">+</button>
+              </div>
+              <div class="stock-status">
+                <i class="fas fa-check-circle"></i> Còn hàng (50+ sản phẩm)
+              </div>
+            </div>
+          </div>
+
+          <!-- Total Price -->
+          <div class="total-price">
+            <span class="total-label">Tổng cộng:</span>
+            <span class="total-amount">649.000 đ</span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="action-buttons">
+            <button class="btn-add-cart">
+              <i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng
+            </button>
+            <button class="btn-buy-now">
+              Mua Ngay
+            </button>
+          </div>
+
+          <!-- Special Offers -->
+          <div class="special-offers">
+            <h3>Ưu đãi đặc biệt</h3>
+            <div class="offer-item">
+              <i class="fas fa-truck"></i>
+              <span>Miễn phí vận chuyển cho đơn hàng từ 500.000đ</span>
+            </div>
+            <div class="offer-item">
+              <i class="fas fa-undo"></i>
+              <span>Đổi trả miễn phí trong 30 ngày</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function changeMainImage(thumbnail) {
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = thumbnail.src;
+        
+        // Remove active class from all thumbnails
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+          thumb.classList.remove('active');
+        });
+        
+        // Add active class to clicked thumbnail
+        thumbnail.classList.add('active');
+      }
+
+      function increaseQuantity() {
+        const qty = document.getElementById('quantity');
+        const currentValue = parseInt(qty.value);
+        if (currentValue < 50) {
+          qty.value = currentValue + 1;
+          updateTotalPrice();
+        }
+      }
+
+      function decreaseQuantity() {
+        const qty = document.getElementById('quantity');
+        const currentValue = parseInt(qty.value);
+        if (currentValue > 1) {
+          qty.value = currentValue - 1;
+          updateTotalPrice();
+        }
+      }
+
+      function updateTotalPrice() {
+        const qty = document.getElementById('quantity').value;
+        const basePrice = 649000;
+        const total = basePrice * qty;
+        document.querySelector('.total-amount').textContent = total.toLocaleString('vi-VN') + ' đ';
+      }
+
+      // Update total price when quantity input changes
+      document.getElementById('quantity').addEventListener('change', updateTotalPrice);
+    </script>
+  </body>
+</html>
